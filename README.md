@@ -1,7 +1,7 @@
 # CapCoffee
 캡슐커피의 모든것
 
-<p align="center"> <img width="622" alt="선행" src="hhttps://user-images.githubusercontent.com/37679062/78653327-ec048680-78fd-11ea-9568-ff041b703c22.png"> </p>
+<p align="center"> <img width="622" alt="선행" src="https://user-images.githubusercontent.com/37679062/78653327-ec048680-78fd-11ea-9568-ff041b703c22.png"> </p>
 
 
 __"정만 간단한 인터페이스로 내가 원하는 커피 캡슐 검색!"__
