@@ -29,11 +29,19 @@ class CoffeeAdapter(val context: Context, val coffeelist: List<CoffeeItem>, val 
         val imageView: ImageView = itemView.image_view
         val intensityView: ImageView = itemView.intensity_view
         val nameView: TextView = itemView.item_name
+        val ristretto: ImageView = itemView.ristrettoView
+        val espresso: ImageView = itemView.espressoView
+        val lungo: ImageView = itemView.lungoView
 
         fun bind(coffeeitem: CoffeeItem, context: Context){
             imageView.setImageResource(coffeeitem.imageResourse)
             intensityView.setImageResource(coffeeitem.intensityImage)
             nameView.text = coffeeitem.capsuleName
+
+            if(coffeeitem.ristretto == 0) ristretto.setImageAlpha(50)
+            if(coffeeitem.espresso == 0) espresso.setImageAlpha(50)
+            if(coffeeitem.lungo == 0) lungo.setImageAlpha(50)
+
 
             itemView.setOnClickListener { itemClick(coffeeitem) }
         }
