@@ -1,7 +1,9 @@
 package com.example.capcoffee
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.capcoffee.datas.CoffeeItem
 import kotlinx.android.synthetic.main.activity_nespresso.*
@@ -14,9 +16,15 @@ class NespressoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_nespresso)
 
-        recycler_view.adapter = CoffeeAdapter(nespressoList)
+        recycler_view.adapter = CoffeeAdapter(this,nespressoList){
+            coffeeItem ->  val intent = Intent(this, CoffeeDetailActivity::class.java)
+            intent.putExtra("CoffeeName", coffeeItem.capsuleName)
+            startActivity(intent)
+        }
         recycler_view.layoutManager = LinearLayoutManager(this)
         recycler_view.setHasFixedSize(true)
+
+
     }
 
 

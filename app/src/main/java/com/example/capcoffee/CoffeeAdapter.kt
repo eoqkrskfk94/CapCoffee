@@ -1,5 +1,6 @@
 package com.example.capcoffee
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,36 +10,37 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.capcoffee.datas.CoffeeItem
 import kotlinx.android.synthetic.main.coffee_item.view.*
 
-class CoffeeAdapter(private val coffeelist: List<CoffeeItem>) : RecyclerView.Adapter<CoffeeAdapter.CoffeeViewHolder>() {
+class CoffeeAdapter(val context: Context, val coffeelist: List<CoffeeItem>, val itemClick: (CoffeeItem) -> Unit) : RecyclerView.Adapter<CoffeeAdapter.CoffeeViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CoffeeViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.coffee_item,
             parent,false)
 
-        return CoffeeViewHolder(itemView)
+        return CoffeeViewHolder(itemView, itemClick)
     }
 
     override fun onBindViewHolder(holder: CoffeeViewHolder, position: Int) {
-        val currentItem = coffeelist[position]
-
-
-        holder.imageView.setImageResource(currentItem.imageResourse)
-        holder.intensityView.setImageResource(currentItem.intensityImage)
-        holder.textView.text = currentItem.text1
-
-
-
+        holder?.bind(coffeelist[position], context)
     }
 
     override fun getItemCount() = coffeelist.size
 
-    class CoffeeViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+    inner class CoffeeViewHolder(itemView: View, itemClick: (CoffeeItem) -> Unit) : RecyclerView.ViewHolder(itemView){
         val imageView: ImageView = itemView.image_view
         val intensityView: ImageView = itemView.intensity_view
-        val textView: TextView = itemView.item_name
+        val nameView: TextView = itemView.item_name
 
+        fun bind(coffeeitem: CoffeeItem, context: Context){
+            imageView.setImageResource(coffeeitem.imageResourse)
+            intensityView.setImageResource(coffeeitem.intensityImage)
+            nameView.text = coffeeitem.capsuleName
 
+            itemView.setOnClickListener { itemClick(coffeeitem) }
+        }
 
     }
+
+
+
 
 }
