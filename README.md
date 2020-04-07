@@ -19,8 +19,7 @@ __"정만 간단한 인터페이스, 쉬운 사용법, 많지 않은 버튼!"__
 
 네스프레소 , 스타벅스, 일리, 던킨 도넛츠
 
-<p align="center"> <img width="622" alt="선행" src="
-https://user-images.githubusercontent.com/37679062/78652913-54069d00-78fd-11ea-9ea1-355f2adda772.png"> </p>
+<p align="center"> <img width="622" alt="선행" src="https://user-images.githubusercontent.com/37679062/78652913-54069d00-78fd-11ea-9ea1-355f2adda772.png"> </p>
 
 
 ### 추후 추가될 커피 캡슐 브랜드
