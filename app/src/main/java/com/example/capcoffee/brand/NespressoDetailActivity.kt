@@ -1,10 +1,11 @@
-package com.example.capcoffee
+package com.example.capcoffee.brand
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.capcoffee.R
 import kotlinx.android.synthetic.main.activity_coffee_detail.*
 
-class CoffeeDetailActivity : AppCompatActivity() {
+class NespressoDetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -13,6 +14,7 @@ class CoffeeDetailActivity : AppCompatActivity() {
         var intent = intent
         val name = intent.getStringExtra("CoffeeName")
 
-        capsuleNametxt.text = name
+
+        back_btn.setOnClickListener { finish() }
     }
 }
