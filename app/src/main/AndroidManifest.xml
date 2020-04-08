@@ -9,9 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".brand.DunkinActivity"></activity>
         <activity
-            android:name=".brand.NespressoDetailActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+            android:name=".brand.IllyActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".CoffeeDetailActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".SplashActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
@@ -22,7 +26,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".NespressoActivity"
+            android:name=".brand.NespressoActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".MainActivity"

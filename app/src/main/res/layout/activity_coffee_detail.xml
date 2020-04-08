@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".brand.NespressoDetailActivity">
+    tools:context=".CoffeeDetailActivity">
 
 
     <LinearLayout
@@ -35,7 +35,7 @@
             <ImageView
                 android:id="@+id/coffee_image"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="300dp"
                 app:srcCompat="@drawable/nes_arpegio_decaf" />
 
             <TextView
@@ -48,16 +48,33 @@
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/short_description"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:paddingBottom="10dp"
-                android:text="짧은 설명"
-                android:textSize="18sp" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/short_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="짧은 설명"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/capTypetxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:layout_weight="1"
+                    android:text="TextView"
+                    android:textAlignment="textEnd"
+                    android:textSize="18sp" />
+            </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/intensityView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="20dp"
@@ -127,7 +144,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                tools:visibility="visible">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -239,11 +257,11 @@
                 android:paddingTop="30dp"
                 android:paddingBottom="30dp"
                 android:text="TextView"
-                android:textSize="16sp"
+                android:textSize="18sp"
                 android:textColor="#000000" />
 
             <TextView
-                android:id="@+id/textView10"
+                android:id="@+id/textView8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -264,7 +282,7 @@
                 android:textColor="#000000" />
 
             <TextView
-                android:id="@+id/textView16"
+                android:id="@+id/textView9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -285,7 +303,7 @@
                 android:textColor="#000000" />
 
             <TextView
-                android:id="@+id/textView18"
+                android:id="@+id/textView10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -306,7 +324,7 @@
                 android:textColor="#000000" />
 
             <TextView
-                android:id="@+id/textView19"
+                android:id="@+id/textView11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"

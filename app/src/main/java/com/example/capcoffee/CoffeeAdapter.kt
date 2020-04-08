@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.capcoffee.datas.NespressoItem
@@ -33,12 +34,16 @@ class CoffeeAdapter(val context: Context, val coffeelist: List<NespressoItem>, v
         val espresso: ImageView = itemView.espressoView
         val lungo: ImageView = itemView.lungoView
         val sideName: TextView = itemView.short_description
+        val intensityLay: LinearLayout = itemView.intensityLayout
 
         fun bind(coffeeitem: NespressoItem, context: Context){
             imageView.setImageResource(coffeeitem.imageResourse)
             intensityView.setImageResource(coffeeitem.intensityImage)
+            if(coffeeitem.intensity == 0){
+                intensityLay.visibility = View.GONE
+            }
             nameView.text = coffeeitem.capsuleName
-            sideName.text = coffeeitem.side_title
+            sideName.text = coffeeitem.side_name
 
             if(coffeeitem.ristretto == 0) ristretto.setImageAlpha(50)
             if(coffeeitem.espresso == 0) espresso.setImageAlpha(50)

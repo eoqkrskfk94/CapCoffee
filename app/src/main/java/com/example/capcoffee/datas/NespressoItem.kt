@@ -20,7 +20,8 @@ data class NespressoItem(val imageResourse: Int,
                          val description2: String,
                          val description3: String,
                          val description4: String,
-                         val description5: String) : Parcelable {
+                         val description5: String,
+                         val capType: String) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
         parcel.readString(),
@@ -33,6 +34,7 @@ data class NespressoItem(val imageResourse: Int,
         parcel.readInt(),
         parcel.readInt(),
         parcel.readInt(),
+        parcel.readString(),
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
@@ -62,6 +64,7 @@ data class NespressoItem(val imageResourse: Int,
         parcel.writeString(description3)
         parcel.writeString(description4)
         parcel.writeString(description5)
+        parcel.writeString(capType)
     }
 
     override fun describeContents(): Int {
