@@ -53,13 +53,74 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
+                android:paddingBottom="10dp"
                 android:text="짧은 설명"
                 android:textSize="18sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"></LinearLayout>
+                android:layout_margin="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="강도 : "
+                    android:textColor="#000000" />
+
+                <ImageView
+                    android:id="@+id/intensity_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@drawable/nes_0" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="25dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ristretto_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/ristretto" />
+
+                <ImageView
+                    android:id="@+id/espresso_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/espresso" />
+
+                <ImageView
+                    android:id="@+id/lungo_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/lungo" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/side_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:paddingTop="30dp"
+                android:paddingBottom="30dp"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -178,6 +239,7 @@
                 android:paddingTop="30dp"
                 android:paddingBottom="30dp"
                 android:text="TextView"
+                android:textSize="16sp"
                 android:textColor="#000000" />
 
             <TextView
@@ -186,16 +248,19 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:text="원산지"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView11"
+                android:id="@+id/description_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="30dp"
                 android:text="TextView"
+                android:textSize="16sp"
                 android:textColor="#000000" />
 
             <TextView
@@ -203,17 +268,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="원산지"
-                android:textColor="#000000" />
+                android:text="로스팅"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
 
             <TextView
-                android:id="@+id/textView17"
+                android:id="@+id/description_3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="30dp"
                 android:text="TextView"
+                android:textSize="16sp"
                 android:textColor="#000000" />
 
             <TextView
@@ -221,11 +289,34 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="원산지"
+                android:text="아로마 프로파일"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/description_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="30dp"
+                android:text="TextView"
+                android:textSize="16sp"
                 android:textColor="#000000" />
 
             <TextView
                 android:id="@+id/textView19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="성분 및 알레르기"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/description_5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"

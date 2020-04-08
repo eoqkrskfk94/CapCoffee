@@ -7,10 +7,10 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.capcoffee.datas.CoffeeItem
+import com.example.capcoffee.datas.NespressoItem
 import kotlinx.android.synthetic.main.coffee_item.view.*
 
-class CoffeeAdapter(val context: Context, val coffeelist: List<CoffeeItem>, val itemClick: (CoffeeItem) -> Unit) : RecyclerView.Adapter<CoffeeAdapter.CoffeeViewHolder>() {
+class CoffeeAdapter(val context: Context, val coffeelist: List<NespressoItem>, val itemClick: (NespressoItem) -> Unit) : RecyclerView.Adapter<CoffeeAdapter.CoffeeViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CoffeeViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.coffee_item,
@@ -25,18 +25,20 @@ class CoffeeAdapter(val context: Context, val coffeelist: List<CoffeeItem>, val 
 
     override fun getItemCount() = coffeelist.size
 
-    inner class CoffeeViewHolder(itemView: View, itemClick: (CoffeeItem) -> Unit) : RecyclerView.ViewHolder(itemView){
+    inner class CoffeeViewHolder(itemView: View, itemClick: (NespressoItem) -> Unit) : RecyclerView.ViewHolder(itemView){
         val imageView: ImageView = itemView.image_view
         val intensityView: ImageView = itemView.intensity_view
         val nameView: TextView = itemView.item_name
         val ristretto: ImageView = itemView.ristrettoView
         val espresso: ImageView = itemView.espressoView
         val lungo: ImageView = itemView.lungoView
+        val sideName: TextView = itemView.short_description
 
-        fun bind(coffeeitem: CoffeeItem, context: Context){
+        fun bind(coffeeitem: NespressoItem, context: Context){
             imageView.setImageResource(coffeeitem.imageResourse)
             intensityView.setImageResource(coffeeitem.intensityImage)
             nameView.text = coffeeitem.capsuleName
+            sideName.text = coffeeitem.side_title
 
             if(coffeeitem.ristretto == 0) ristretto.setImageAlpha(50)
             if(coffeeitem.espresso == 0) espresso.setImageAlpha(50)
