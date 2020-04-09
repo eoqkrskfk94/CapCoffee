@@ -40,8 +40,6 @@ class CoffeeAdapter(val context: Context, val coffeelist: List<CoffeeItem>, val 
 
         fun bind(coffeeitem: CoffeeItem, context: Context){
             Glide.with(context).load(coffeeitem.imageResourse).into(imageView)
-            //imageView.setImageResource(coffeeitem.imageResourse)
-            //intensityView.setImageResource(coffeeitem.intensityImage)
             Glide.with(context).load(coffeeitem.intensityImage).into(intensityView)
             if(coffeeitem.intensity == 0){
                 intensityLay.visibility = View.GONE

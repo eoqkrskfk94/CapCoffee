@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".InsertActivity"></activity>
         <activity
             android:name=".brand.StarbucksActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".brand.DunkinActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />

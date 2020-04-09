@@ -34,5 +34,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, StarbucksActivity::class.java)
             startActivity(intent)
         }
+
+        insert_btn.setOnClickListener{
+            val intent = Intent(this, InsertActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

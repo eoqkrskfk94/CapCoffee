@@ -25,11 +25,12 @@ class CoffeeDetailActivity : AppCompatActivity() {
         if (coffee.lungo == 0) lungo_view.setImageAlpha(50)
         side_title.text = coffee.side_title
         capTypetxt.text = coffee.capType
+        var des1 = coffee.description1
         description_1.text = coffee.description1
         description_2.text = coffee.description2
         description_3.text = coffee.description3
         description_4.text = coffee.description4
-        description_5.text = coffee.description5
+        description_5.text = coffee.description5.replace("\\n","\n")
 
         val brand = intent.getStringExtra("Brand")
 

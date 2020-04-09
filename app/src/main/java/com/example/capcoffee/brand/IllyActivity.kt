@@ -18,7 +18,6 @@ import kotlinx.android.synthetic.main.activity_nespresso.*
 
 class IllyActivity : AppCompatActivity() {
 
-    lateinit var mDatabase : DatabaseReference
     var illyList = ArrayList<CoffeeItem>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,7 +44,7 @@ class IllyActivity : AppCompatActivity() {
                         )
                         intent.putExtra("Brand", "Illy")
 
-                        //intent.putExtra("coffee", coffeeItem)
+                        intent.putExtra("coffee", coffeeItem)
                         startActivity(intent)
 
                     }

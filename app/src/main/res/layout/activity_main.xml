@@ -77,6 +77,13 @@
                 android:layout_below="@id/line3"
                 android:background="@android:color/transparent"
                 app:srcCompat="@drawable/dunkin" />
+
+            <Button
+                android:id="@+id/insert_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dunkinBtn"
+                android:text="Button" />
         </RelativeLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
