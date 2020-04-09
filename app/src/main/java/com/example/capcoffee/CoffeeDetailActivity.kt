@@ -3,6 +3,7 @@ package com.example.capcoffee
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.bumptech.glide.Glide
 import com.example.capcoffee.datas.CoffeeItem
 import kotlinx.android.synthetic.main.activity_coffee_detail.*
 
@@ -14,23 +15,28 @@ class CoffeeDetailActivity : AppCompatActivity() {
 
         var intent = intent
         val coffee = intent.getParcelableExtra<CoffeeItem>("coffee")
-
+        Glide.with(this).load(coffee.imageResourse).into(coffee_image)
         //coffee_image.setImageResource(coffee.imageResourse)
         coffee_name.text = coffee.capsule_name
-        short_description.text = coffee.side_name
+        short_description.text = coffee.side_name.replace("\\n","\n")
         //intensity_view.setImageResource(coffee.intensityImage)
+        Glide.with(this).load(coffee.intensityImage).into(intensity_view)
         if (coffee.intensity == 0) intensityView.visibility = View.GONE
         if (coffee.ristretto == 0) ristretto_view.setImageAlpha(50)
         if (coffee.espresso == 0) espresso_view.setImageAlpha(50)
         if (coffee.lungo == 0) lungo_view.setImageAlpha(50)
-        side_title.text = coffee.side_title
+        side_title.text = coffee.side_title.replace("\\n","\n")
         capTypetxt.text = coffee.capType
-        var des1 = coffee.description1
-        description_1.text = coffee.description1
-        description_2.text = coffee.description2
-        description_3.text = coffee.description3
-        description_4.text = coffee.description4
+        description_1.text = coffee.description1.replace("\\n","\n")
+        description_2.text = coffee.description2.replace("\\n","\n")
+        description_3.text = coffee.description3.replace("\\n","\n")
+        description_4.text = coffee.description4.replace("\\n","\n")
         description_5.text = coffee.description5.replace("\\n","\n")
+
+        Glide.with(this).load(coffee.com_image1).into(description2_image)
+        Glide.with(this).load(coffee.com_image2).into(description3_image)
+        Glide.with(this).load(coffee.com_image3).into(description4_image)
+
 
         val brand = intent.getStringExtra("Brand")
 
