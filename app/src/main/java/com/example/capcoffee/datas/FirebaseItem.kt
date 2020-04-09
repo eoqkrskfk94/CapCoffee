@@ -3,26 +3,27 @@ package com.example.capcoffee.datas
 import android.os.Parcel
 import android.os.Parcelable
 
-data class CoffeeItem(val imageResourse: String,
-                      val capsule_name : String,
-                      val intensity: Int,
-                      val intensityImage: String,
-                      val ristretto: Int,
-                      val espresso: Int,
-                      val lungo: Int,
-                      val roasting: Int,
-                      val bitterness: Int,
-                      val sourness: Int,
-                      val body: Int,
-                      val side_name: String,
-                      val side_title: String,
-                      val description1: String,
-                      val description2: String,
-                      val description3: String,
-                      val description4: String,
-                      val description5: String,
-                      val capType: String) : Parcelable {
-    constructor(parcel: Parcel) : this(
+data class FirebaseItem(val imageResourse: String,
+                   val capsule_name : String,
+                   val intensity: Int,
+                   val intensityImage: String,
+                   val ristretto: Int,
+                   val espresso: Int,
+                   val lungo: Int,
+                   val roasting: Int,
+                   val bitterness: Int,
+                   val sourness: Int,
+                   val body: Int,
+                   val side_name: String,
+                   val side_title: String,
+                   val description1: String,
+                   val description2: String,
+                   val description3: String,
+                   val description4: String,
+                   val description5: String,
+                   val capType: String) : Parcelable {
+
+    constructor(parcel : Parcel) : this(
         parcel.readString(),
         parcel.readString(),
         parcel.readInt(),
@@ -44,9 +45,10 @@ data class CoffeeItem(val imageResourse: String,
         parcel.readString()
     ) {
     }
+
     constructor() : this("","",0,"",0,0,0,0,0,0,0,"","","","","","","","")
 
-    override fun writeToParcel(parcel: Parcel, flags: Int) {
+    override fun writeToParcel(parcel : Parcel, flags : Int) {
         parcel.writeString(imageResourse)
         parcel.writeString(capsule_name)
         parcel.writeInt(intensity)
@@ -68,18 +70,19 @@ data class CoffeeItem(val imageResourse: String,
         parcel.writeString(capType)
     }
 
-    override fun describeContents(): Int {
+    override fun describeContents() : Int {
         return 0
     }
 
-    companion object CREATOR : Parcelable.Creator<CoffeeItem> {
-        override fun createFromParcel(parcel: Parcel): CoffeeItem {
-            return CoffeeItem(parcel)
+    companion object CREATOR : Parcelable.Creator<FirebaseItem> {
+        override fun createFromParcel(parcel : Parcel) : FirebaseItem {
+            return FirebaseItem(parcel)
         }
 
-        override fun newArray(size: Int): Array<CoffeeItem?> {
+        override fun newArray(size : Int) : Array<FirebaseItem?> {
             return arrayOfNulls(size)
         }
     }
+
 
 }

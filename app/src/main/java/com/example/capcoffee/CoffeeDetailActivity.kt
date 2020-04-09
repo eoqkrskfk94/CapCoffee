@@ -15,10 +15,10 @@ class CoffeeDetailActivity : AppCompatActivity() {
         var intent = intent
         val coffee = intent.getParcelableExtra<CoffeeItem>("coffee")
 
-        coffee_image.setImageResource(coffee.imageResourse)
-        coffee_name.text = coffee.capsuleName
+        //coffee_image.setImageResource(coffee.imageResourse)
+        coffee_name.text = coffee.capsule_name
         short_description.text = coffee.side_name
-        intensity_view.setImageResource(coffee.intensityImage)
+        //intensity_view.setImageResource(coffee.intensityImage)
         if (coffee.intensity == 0) intensityView.visibility = View.GONE
         if (coffee.ristretto == 0) ristretto_view.setImageAlpha(50)
         if (coffee.espresso == 0) espresso_view.setImageAlpha(50)

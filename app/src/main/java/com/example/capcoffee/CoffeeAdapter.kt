@@ -8,7 +8,9 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.capcoffee.datas.CoffeeItem
+import com.example.capcoffee.datas.FirebaseItem
 import kotlinx.android.synthetic.main.coffee_item.view.*
 
 class CoffeeAdapter(val context: Context, val coffeelist: List<CoffeeItem>, val itemClick: (CoffeeItem) -> Unit) : RecyclerView.Adapter<CoffeeAdapter.CoffeeViewHolder>() {
@@ -37,12 +39,14 @@ class CoffeeAdapter(val context: Context, val coffeelist: List<CoffeeItem>, val 
         val intensityLay: LinearLayout = itemView.intensityLayout
 
         fun bind(coffeeitem: CoffeeItem, context: Context){
-            imageView.setImageResource(coffeeitem.imageResourse)
-            intensityView.setImageResource(coffeeitem.intensityImage)
+            Glide.with(context).load(coffeeitem.imageResourse).into(imageView)
+            //imageView.setImageResource(coffeeitem.imageResourse)
+            //intensityView.setImageResource(coffeeitem.intensityImage)
+            Glide.with(context).load(coffeeitem.intensityImage).into(intensityView)
             if(coffeeitem.intensity == 0){
                 intensityLay.visibility = View.GONE
             }
-            nameView.text = coffeeitem.capsuleName
+            nameView.text = coffeeitem.capsule_name
             sideName.text = coffeeitem.side_name
 
             if(coffeeitem.ristretto == 0) ristretto.setImageAlpha(50)
