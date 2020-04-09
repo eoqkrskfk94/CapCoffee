@@ -53,4 +53,8 @@ dependencies {
 
     /* optional - Guava support for Room, including Optional and ListenableFuture */
     implementation "android.arch.persistence.room:guava:1.1.1"
+
+    implementation 'com.google.firebase:firebase-core:17.0.0'
 }
+
+apply plugin: 'com.google.gms.google-services'

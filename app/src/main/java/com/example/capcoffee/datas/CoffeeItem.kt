@@ -3,25 +3,25 @@ package com.example.capcoffee.datas
 import android.os.Parcel
 import android.os.Parcelable
 
-data class NespressoItem(val imageResourse: Int,
-                         val capsuleName : String,
-                         val intensity: Int,
-                         val intensityImage: Int,
-                         val ristretto: Int,
-                         val espresso: Int,
-                         val lungo: Int,
-                         val roasting: Int,
-                         val bitterness: Int,
-                         val sourness: Int,
-                         val body: Int,
-                         val side_name: String,
-                         val side_title: String,
-                         val description1: String,
-                         val description2: String,
-                         val description3: String,
-                         val description4: String,
-                         val description5: String,
-                         val capType: String) : Parcelable {
+data class CoffeeItem(val imageResourse: Int,
+                      val capsuleName : String,
+                      val intensity: Int,
+                      val intensityImage: Int,
+                      val ristretto: Int,
+                      val espresso: Int,
+                      val lungo: Int,
+                      val roasting: Int,
+                      val bitterness: Int,
+                      val sourness: Int,
+                      val body: Int,
+                      val side_name: String,
+                      val side_title: String,
+                      val description1: String,
+                      val description2: String,
+                      val description3: String,
+                      val description4: String,
+                      val description5: String,
+                      val capType: String) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
         parcel.readString(),
@@ -71,12 +71,12 @@ data class NespressoItem(val imageResourse: Int,
         return 0
     }
 
-    companion object CREATOR : Parcelable.Creator<NespressoItem> {
-        override fun createFromParcel(parcel: Parcel): NespressoItem {
-            return NespressoItem(parcel)
+    companion object CREATOR : Parcelable.Creator<CoffeeItem> {
+        override fun createFromParcel(parcel: Parcel): CoffeeItem {
+            return CoffeeItem(parcel)
         }
 
-        override fun newArray(size: Int): Array<NespressoItem?> {
+        override fun newArray(size: Int): Array<CoffeeItem?> {
             return arrayOfNulls(size)
         }
     }

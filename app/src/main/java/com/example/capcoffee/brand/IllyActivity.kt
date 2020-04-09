@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.capcoffee.CoffeeAdapter
 import com.example.capcoffee.CoffeeDetailActivity
 import com.example.capcoffee.R
-import com.example.capcoffee.datas.NespressoItem
+import com.example.capcoffee.datas.CoffeeItem
 import kotlinx.android.synthetic.main.activity_nespresso.*
 
 class IllyActivity : AppCompatActivity() {
@@ -36,8 +36,8 @@ class IllyActivity : AppCompatActivity() {
 
     }
 
-    var illyList = arrayListOf<NespressoItem>(
-        NespressoItem(
+    var illyList = arrayListOf<CoffeeItem>(
+        CoffeeItem(
             R.drawable.illy_classico_lungo,
             "클라스코", 5, R.drawable.illy_5, 1, 1, 0, 0,0,0,0,
             "Classico",
@@ -49,7 +49,7 @@ class IllyActivity : AppCompatActivity() {
             "아라비카 원두커피 100%\n원산지 : 프링스\n용량 : 57g (5.7g x 10ea) \n보관방법 : 직사광선을 피하여, 건조하고 서능한 곳에 보관.",
             "알루미늄캡슐"
         ),
-        NespressoItem(
+        CoffeeItem(
             R.drawable.illy_classico,
             "클라스코 룽고", 5,
             R.drawable.illy_5, 0, 0, 1, 0,0,0,0,
@@ -62,7 +62,7 @@ class IllyActivity : AppCompatActivity() {
             "아라비카 원두커피 100%\n원산지 : 프링스\n용량 : 57g (5.7g x 10ea) \n보관방법 : 직사광선을 피하여, 건조하고 서능한 곳에 보관.",
             "알루미늄캡슐"
         ),
-        NespressoItem(
+        CoffeeItem(
             R.drawable.illy_intenso,
         "인텐소", 7, R.drawable.illy_7, 1, 1, 0, 0,0,0,0,
         "Intenso",
@@ -74,7 +74,7 @@ class IllyActivity : AppCompatActivity() {
         "아라비카 원두커피 100%\n원산지 : 프링스\n용량 : 57g (5.7g x 10ea) \n보관방법 : 직사광선을 피하여, 건조하고 서능한 곳에 보관.",
             "알루미늄캡슐"
         ),
-        NespressoItem(
+        CoffeeItem(
             R.drawable.illy_forte,
             "포르테", 9, R.drawable.illy_9, 1, 1, 0, 0,0,0,0,
            "Forte",
@@ -86,7 +86,7 @@ class IllyActivity : AppCompatActivity() {
             "아라비카 원두커피 100%\n원산지 : 프링스\n용량 : 57g (5.7g x 10ea) \n보관방법 : 직사광선을 피하여, 건조하고 서능한 곳에 보관.",
             "알루미늄캡슐"
         ),
-        NespressoItem(
+        CoffeeItem(
             R.drawable.illy_decaf,
             "디카페인", 9, R.drawable.illy_5, 1, 1, 0, 0,0,0,0,
             "Decaf",

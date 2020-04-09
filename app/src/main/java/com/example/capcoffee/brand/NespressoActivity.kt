@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.capcoffee.CoffeeAdapter
 import com.example.capcoffee.CoffeeDetailActivity
 import com.example.capcoffee.R
-import com.example.capcoffee.datas.NespressoItem
+import com.example.capcoffee.datas.CoffeeItem
 import kotlinx.android.synthetic.main.activity_nespresso.*
 
 
@@ -42,8 +42,8 @@ class NespressoActivity : AppCompatActivity() {
 
 
 
-    var nespressoList = arrayListOf<NespressoItem>(
-        NespressoItem(
+    var nespressoList = arrayListOf<CoffeeItem>(
+        CoffeeItem(
             R.drawable.nes_kazaar,
             "팔레르모 카자르", 12,
             R.drawable.nes_12, 1, 1, 0, 4,5,1,5,
@@ -56,7 +56,7 @@ class NespressoActivity : AppCompatActivity() {
             " 네스프레소 커피머신과 함께 사용 가능한 커피 캡슐 10개\n\n 주요 성분\n 로스팅된 분쇄 커피 원두 100%\n\n 중량 (10개 커피 캡슐)\n 60g\n\n 원산지 : 스위스",
             "알루미늄캡슐"
             ),
-        NespressoItem(
+        CoffeeItem(
             R.drawable.nes_italiano,
             "리스트레토 이탈리아노",10,
             R.drawable.nes_10,1,1,0,4,4,3,4,
@@ -73,7 +73,7 @@ class NespressoActivity : AppCompatActivity() {
                     "57g\n" +
                     "원산지 : 스위스",
             "알루미늄캡슐"),
-        NespressoItem(
+        CoffeeItem(
             R.drawable.nes_arpeggio,
             "피렌체 아르페지오",9, R.drawable.nes_9,1,1,0,4,4,2,4,
             "강렬함, 진한 로스팅향, 코코아향",
@@ -89,7 +89,7 @@ class NespressoActivity : AppCompatActivity() {
                     "53g - 5.3g x 10\n" +
                     "원산지 : 스위스",
             "알루미늄캡슐"),
-        NespressoItem(
+        CoffeeItem(
             R.drawable.nes_roma,
             "로마",8, R.drawable.nes_8,1,1,0,3,4,4,3,
             "우디향, 국물향",
@@ -105,7 +105,7 @@ class NespressoActivity : AppCompatActivity() {
                     "50g - 5g x 10\n" +
                     "원산지 : 스위스",
             "알루미늄캡슐"),
-        NespressoItem(
+        CoffeeItem(
             R.drawable.nes_livanto,
             "제노바 리반토",6,
             R.drawable.nes_6,0,1,0,3,3,3,3,

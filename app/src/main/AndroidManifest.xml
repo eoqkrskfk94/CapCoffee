@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".brand.DunkinActivity"></activity>
+        <activity
+            android:name=".brand.StarbucksActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:name=".brand.DunkinActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".brand.IllyActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />

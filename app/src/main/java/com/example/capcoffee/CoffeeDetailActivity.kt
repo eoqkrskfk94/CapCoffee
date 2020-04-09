@@ -3,9 +3,7 @@ package com.example.capcoffee
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import androidx.core.view.isInvisible
-import com.example.capcoffee.R
-import com.example.capcoffee.datas.NespressoItem
+import com.example.capcoffee.datas.CoffeeItem
 import kotlinx.android.synthetic.main.activity_coffee_detail.*
 
 class CoffeeDetailActivity : AppCompatActivity() {
@@ -15,7 +13,7 @@ class CoffeeDetailActivity : AppCompatActivity() {
         setContentView(R.layout.activity_coffee_detail)
 
         var intent = intent
-        val coffee = intent.getParcelableExtra<NespressoItem>("coffee")
+        val coffee = intent.getParcelableExtra<CoffeeItem>("coffee")
 
         coffee_image.setImageResource(coffee.imageResourse)
         coffee_name.text = coffee.capsuleName
@@ -53,11 +51,16 @@ class CoffeeDetailActivity : AppCompatActivity() {
             description_5.visibility = View.GONE
         }
 
+        // 스타벅스 브랜드
+        if(brand == "Starbucks"){
+            textView8.text = "스타벅스 알루미늄을 사용하는 이유가 뭘까요?"
+            textView9.text = "캡슐을 재활용하세요"
+            textView10.text = "커피에 관련해 궁금한 점이 있나요?"
+            textView11.visibility = View.GONE
+        }
+
         when (coffee.roasting){
-            0 -> {
-                roasting.visibility = View.GONE
-                textView4.visibility = View.GONE
-            }
+            0 -> styleView1.visibility = View.GONE
             1 -> roasting.setImageResource(R.drawable.inten_1)
             2 -> roasting.setImageResource(R.drawable.inten_2)
             3 -> roasting.setImageResource(R.drawable.inten_3)
@@ -66,10 +69,6 @@ class CoffeeDetailActivity : AppCompatActivity() {
         }
 
         when (coffee.bitterness){
-            0 -> {
-                bitterness.visibility = View.GONE
-                textView5.visibility = View.GONE
-            }
             1 -> bitterness.setImageResource(R.drawable.inten_1)
             2 -> bitterness.setImageResource(R.drawable.inten_2)
             3 -> bitterness.setImageResource(R.drawable.inten_3)
@@ -78,10 +77,7 @@ class CoffeeDetailActivity : AppCompatActivity() {
         }
 
         when (coffee.sourness){
-            0 -> {
-                sourness.visibility = View.GONE
-                textView6.visibility = View.GONE
-            }
+            0 -> styleView2.visibility = View.GONE
             1 -> sourness.setImageResource(R.drawable.inten_1)
             2 -> sourness.setImageResource(R.drawable.inten_2)
             3 -> sourness.setImageResource(R.drawable.inten_3)
@@ -90,17 +86,12 @@ class CoffeeDetailActivity : AppCompatActivity() {
         }
 
         when (coffee.body){
-            0 -> {
-                body.visibility = View.GONE
-                textView7.visibility = View.GONE
-            }
             1 -> body.setImageResource(R.drawable.inten_1)
             2 -> body.setImageResource(R.drawable.inten_2)
             3 -> body.setImageResource(R.drawable.inten_3)
             4 -> body.setImageResource(R.drawable.inten_4)
             5 -> body.setImageResource(R.drawable.inten_5)
         }
-
 
         back_btn.setOnClickListener { finish() }
     }

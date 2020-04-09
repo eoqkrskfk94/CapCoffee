@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.capcoffee.CoffeeAdapter
 import com.example.capcoffee.CoffeeDetailActivity
 import com.example.capcoffee.R
-import com.example.capcoffee.datas.NespressoItem
+import com.example.capcoffee.datas.CoffeeItem
 import kotlinx.android.synthetic.main.activity_nespresso.*
 
 class DunkinActivity : AppCompatActivity() {
@@ -17,7 +17,7 @@ class DunkinActivity : AppCompatActivity() {
         setContentView(R.layout.activity_dunkin)
 
         recycler_view.adapter =
-            CoffeeAdapter(this, illyList) { coffeeItem ->
+            CoffeeAdapter(this, dunkinList) { coffeeItem ->
                 val intent = Intent(
                     this,
                     CoffeeDetailActivity::class.java
@@ -35,8 +35,8 @@ class DunkinActivity : AppCompatActivity() {
         back_btn.setOnClickListener { finish() }
     }
 
-    var illyList = arrayListOf<NespressoItem>(
-        NespressoItem(
+    var dunkinList = arrayListOf<CoffeeItem>(
+        CoffeeItem(
             R.drawable.dunkin_espresso,
             "에스프레소 블렌드", 0, R.drawable.nes_0, 1, 1, 0, 0,0,0,0,
             "Espresso Blend",
@@ -48,7 +48,7 @@ class DunkinActivity : AppCompatActivity() {
             "",
             "알루미늄캡슐"
         ),
-        NespressoItem(
+        CoffeeItem(
             R.drawable.dunkin_chelsea,
             "첼시 바이브", 0, R.drawable.nes_0, 1, 1, 0, 0,0,0,0,
             "Chelsea Vibe",
@@ -60,7 +60,7 @@ class DunkinActivity : AppCompatActivity() {
             "",
             "알루미늄캡슐"
         ),
-        NespressoItem(
+        CoffeeItem(
             R.drawable.dunkin_longbeach,
             "롱 비치 블루 블랜드", 0, R.drawable.nes_0, 1, 1, 0, 0,0,0,0,
             "Long Beach Blue",
@@ -72,7 +72,7 @@ class DunkinActivity : AppCompatActivity() {
             "",
             "알루미늄캡슐"
         ),
-        NespressoItem(
+        CoffeeItem(
             R.drawable.dunkin_esksta,
             "에스키스타뮤즈", 0, R.drawable.nes_0, 1, 1, 0, 0,0,0,0,
             "Esksta Muse Blend",

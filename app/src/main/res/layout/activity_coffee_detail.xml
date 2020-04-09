@@ -140,6 +140,7 @@
                 android:textStyle="bold" />
 
             <LinearLayout
+                android:id="@+id/styleView1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -195,6 +196,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/styleView2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
@@ -260,6 +262,12 @@
                 android:textSize="18sp"
                 android:textColor="#000000" />
 
+            <ImageView
+                android:id="@+id/description2_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/nes_arpeggio" />
+
             <TextView
                 android:id="@+id/textView8"
                 android:layout_width="match_parent"
@@ -281,6 +289,12 @@
                 android:textSize="16sp"
                 android:textColor="#000000" />
 
+            <ImageView
+                android:id="@+id/description3_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/nes_arpeggio" />
+
             <TextView
                 android:id="@+id/textView9"
                 android:layout_width="match_parent"
@@ -301,6 +315,12 @@
                 android:text="TextView"
                 android:textSize="16sp"
                 android:textColor="#000000" />
+
+            <ImageView
+                android:id="@+id/description4_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/nes_arpeggio" />
 
             <TextView
                 android:id="@+id/textView10"

@@ -6,6 +6,7 @@ import android.os.Bundle
 import com.example.capcoffee.brand.DunkinActivity
 import com.example.capcoffee.brand.IllyActivity
 import com.example.capcoffee.brand.NespressoActivity
+import com.example.capcoffee.brand.StarbucksActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -26,6 +27,11 @@ class MainActivity : AppCompatActivity() {
 
         dunkinBtn.setOnClickListener {
             val intent = Intent(this, DunkinActivity::class.java)
+            startActivity(intent)
+        }
+
+        starbucksBtn.setOnClickListener {
+            val intent = Intent(this, StarbucksActivity::class.java)
             startActivity(intent)
         }
     }
