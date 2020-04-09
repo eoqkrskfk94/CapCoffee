@@ -12,7 +12,7 @@ __"정만 간단한 인터페이스로 내가 원하는 커피 캡슐 검색!"__
 
 ### 어플리케이션 구성도 및 사용된 기술
 
-<p align="center"> <img width="622" alt="선행" src="https://user-images.githubusercontent.com/37679062/78921104-5e789080-7acf-11ea-84f3-2f33fc667af8.png"> </p>
+<p align="center"> <img width="700" alt="선행" src="https://user-images.githubusercontent.com/37679062/78921104-5e789080-7acf-11ea-84f3-2f33fc667af8.png"> </p>
 
 ### 현재 검색 가능한 브랜드
 
