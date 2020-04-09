@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "264524699971-a1a0rbc9n9fod5c81mequit8q5eagrjv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.capcoffee",
+            "certificate_hash": "c2de7194d78f9e0525c0ecac346e56a440e02d2f"
+          }
+        },
+        {
           "client_id": "264524699971-o4cmf2dk01a6hqia17cgf7u867h1jmkg.apps.googleusercontent.com",
           "client_type": 3
         }

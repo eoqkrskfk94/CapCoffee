@@ -1,20 +1,38 @@
 package com.example.capcoffee.brand
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.capcoffee.CoffeeAdapter
 import com.example.capcoffee.CoffeeDetailActivity
 import com.example.capcoffee.R
 import com.example.capcoffee.datas.CoffeeItem
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_nespresso.*
 
+
 class IllyActivity : AppCompatActivity() {
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_illy)
+        val db: FirebaseFirestore = FirebaseFirestore.getInstance()
+
+        db.collection("illy")
+            .get()
+            .addOnSuccessListener { result ->
+                for (document in result) {
+                    Log.d("exist", "${document.id} => ${document.data}")
+                }
+            }
+            .addOnFailureListener { exception ->
+                Log.w("no exist", "Error getting documents.", exception)
+            }
+
 
         recycler_view.adapter =
             CoffeeAdapter(this, illyList) { coffeeItem ->
@@ -35,6 +53,8 @@ class IllyActivity : AppCompatActivity() {
         back_btn.setOnClickListener { finish() }
 
     }
+
+
 
     var illyList = arrayListOf<CoffeeItem>(
         CoffeeItem(
