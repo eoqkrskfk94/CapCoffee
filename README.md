@@ -40,9 +40,9 @@ __"정만 간단한 인터페이스로 내가 원하는 커피 캡슐 검색!"__
 
 ### 데이터베이스
 
-
+<p align="center"> <img width="800" alt="선행" src="https://user-images.githubusercontent.com/37679062/78966889-e98f7000-7b3b-11ea-8377-d83111771ec3.png"> </p>
 
 ### 스크린샷
  
-
+<p align="center"> <img width="1000" alt="선행" src="https://user-images.githubusercontent.com/37679062/78966850-d2508280-7b3b-11ea-8c8f-54aa3ad14cb0.png"> </p>
 
