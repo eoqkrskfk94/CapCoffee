@@ -35,9 +35,9 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        insert_btn.setOnClickListener{
-            val intent = Intent(this, InsertActivity::class.java)
-            startActivity(intent)
-        }
+//        insert_btn.setOnClickListener{
+//            val intent = Intent(this, InsertActivity::class.java)
+//            startActivity(intent)
+//        }
     }
 }
