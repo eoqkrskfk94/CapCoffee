@@ -42,6 +42,35 @@
           ]
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:264524699971:android:8194b048167b32df8437f6",
+        "android_client_info": {
+          "package_name": "com.mj.capcoffee"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "264524699971-o4cmf2dk01a6hqia17cgf7u867h1jmkg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbDxLJdL_ac1WxzgMN0t8kBjpgguoNVUQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "264524699971-o4cmf2dk01a6hqia17cgf7u867h1jmkg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
     }
   ],
   "configuration_version": "1"
