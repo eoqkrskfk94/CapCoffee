@@ -9,21 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.mj.capcoffee.InsertActivity"></activity>
         <activity
-            android:name="com.mj.capcoffee.brand.StarbucksActivity"
+            android:name=".brand.NespressoTypeActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name=".InsertActivity" />
+        <activity
+            android:name=".brand.StarbucksActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name="com.mj.capcoffee.brand.DunkinActivity"
+            android:name=".brand.DunkinActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name="com.mj.capcoffee.brand.IllyActivity"
+            android:name=".brand.IllyActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name="com.mj.capcoffee.CoffeeDetailActivity"
+            android:name=".CoffeeDetailActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name="com.mj.capcoffee.SplashActivity"
+            android:name=".SplashActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,10 +35,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.mj.capcoffee.brand.NespressoActivity"
+            android:name=".brand.NespressoItalianoActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name="com.mj.capcoffee.MainActivity"
+            android:name=".MainActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

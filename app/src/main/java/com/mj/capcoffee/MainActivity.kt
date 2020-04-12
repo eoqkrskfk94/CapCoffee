@@ -3,10 +3,7 @@ package com.mj.capcoffee
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.mj.capcoffee.brand.DunkinActivity
-import com.mj.capcoffee.brand.IllyActivity
-import com.mj.capcoffee.brand.NespressoActivity
-import com.mj.capcoffee.brand.StarbucksActivity
+import com.mj.capcoffee.brand.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -16,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         nespressoBtn.setOnClickListener {
-            val intent = Intent(this, NespressoActivity::class.java)
+            val intent = Intent(this, NespressoTypeActivity::class.java)
             startActivity(intent)
         }
 
