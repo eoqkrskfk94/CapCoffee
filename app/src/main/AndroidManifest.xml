@@ -10,8 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".brand.NespressoTypeActivity"
+            android:name=".brand.NespressoBaristaActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity
+            android:name=".brand.NespressoTypeActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".InsertActivity" />
         <activity
             android:name=".brand.StarbucksActivity"

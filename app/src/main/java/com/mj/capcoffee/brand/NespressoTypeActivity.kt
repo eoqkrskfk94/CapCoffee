@@ -5,9 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import com.mj.capcoffee.R
-import kotlinx.android.synthetic.main.activity_nespresso.*
 import kotlinx.android.synthetic.main.activity_nespresso.back_btn
-import kotlinx.android.synthetic.main.activity_nespresso_type.*
 
 class NespressoTypeActivity : AppCompatActivity() {
 
@@ -21,6 +19,11 @@ class NespressoTypeActivity : AppCompatActivity() {
 
         imageView2.setOnClickListener {
             val intent = Intent(this, NespressoItalianoActivity::class.java)
+            startActivity(intent) }
+
+
+        imageView1.setOnClickListener {
+            val intent = Intent(this, NespressoBaristaActivity::class.java)
             startActivity(intent) }
 
 

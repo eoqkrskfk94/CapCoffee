@@ -15,11 +15,11 @@ class CoffeeDetailActivity : AppCompatActivity() {
 
         var intent = intent
         val coffee = intent.getParcelableExtra<CoffeeItem>("coffee")
+        println("here")
+        println(coffee.imageResourse)
         Glide.with(this).load(coffee.imageResourse).into(coffee_image)
-        //coffee_image.setImageResource(coffee.imageResourse)
         coffee_name.text = coffee.capsule_name
         short_description.text = coffee.side_name.replace("\\n","\n")
-        //intensity_view.setImageResource(coffee.intensityImage)
         Glide.with(this).load(coffee.intensityImage).into(intensity_view)
         if (coffee.intensity == 0) intensityView.visibility = View.GONE
         if (coffee.ristretto == 0) ristretto_view.setImageAlpha(50)
@@ -33,9 +33,11 @@ class CoffeeDetailActivity : AppCompatActivity() {
         description_4.text = coffee.description4.replace("\\n","\n")
         description_5.text = coffee.description5.replace("\\n","\n")
 
-        Glide.with(this).load(coffee.com_image1).into(description2_image)
-        Glide.with(this).load(coffee.com_image2).into(description3_image)
-        Glide.with(this).load(coffee.com_image3).into(description4_image)
+        if(coffee.com_image1 != "") Glide.with(this).load(coffee.com_image1).into(description2_image)
+        if(coffee.com_image2 != "") Glide.with(this).load(coffee.com_image2).into(description3_image)
+        if(coffee.com_image3 != "") Glide.with(this).load(coffee.com_image3).into(description4_image)
+
+        if(coffee.com_image3 == "")description4_image.visibility = View.GONE
 
 
         val brand = intent.getStringExtra("Brand")
