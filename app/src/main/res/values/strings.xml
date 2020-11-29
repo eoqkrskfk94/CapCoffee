@@ -5,4 +5,8 @@
     <string name="starbucks">starbucks</string>
     <string name="illy">illy</string>
     <string name="dunkin">dunkin</string>
+
+    <string name="barista">barista</string>
+    <string name="iltaliano">dunkin</string>
+    <string name="espresso_lungo">espresso lungo</string>
 </resources>
