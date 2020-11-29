@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <import type="android.view.View" />
 
         <variable
@@ -31,8 +31,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="50dp"
-                    android:onClick="@{()->viewModel.brandBtnClick(@string/nespresso, nespressoBtn)}"
                     android:background="@android:color/transparent"
+                    android:onClick="@{()->viewModel.brandBtnClick(@string/nespresso, nespressoBtn)}"
                     app:srcCompat="@drawable/nespresso" />
 
                 <ImageView
@@ -51,6 +51,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/line"
                     android:background="@android:color/transparent"
+                    android:onClick="@{()->viewModel.brandBtnClick(@string/starbucks, starbucksBtn)}"
                     app:srcCompat="@drawable/starbucks" />
 
                 <ImageView
@@ -70,6 +71,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/line2"
                     android:background="@android:color/transparent"
+                    android:onClick="@{()->viewModel.brandBtnClick(@string/illy, illyBtn)}"
                     app:srcCompat="@drawable/illy" />
 
                 <ImageView
@@ -88,26 +90,27 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/line3"
                     android:background="@android:color/transparent"
+                    android:onClick="@{()->viewModel.brandBtnClick(@string/dunkin, dunkinBtn)}"
                     app:srcCompat="@drawable/dunkin" />
 
 
-<!--                <ImageView-->
-<!--                    android:id="@+id/line4"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_below="@id/dunkinBtn"-->
-<!--                    android:layout_centerHorizontal="true"-->
-<!--                    android:layout_marginTop="25dp"-->
-<!--                    android:layout_marginBottom="25dp"-->
-<!--                    app:srcCompat="@drawable/line" />-->
+                <!--                <ImageView-->
+                <!--                    android:id="@+id/line4"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_below="@id/dunkinBtn"-->
+                <!--                    android:layout_centerHorizontal="true"-->
+                <!--                    android:layout_marginTop="25dp"-->
+                <!--                    android:layout_marginBottom="25dp"-->
+                <!--                    app:srcCompat="@drawable/line" />-->
 
-<!--                <ImageButton-->
-<!--                    android:id="@+id/paulbassettBtn"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_below="@id/line4"-->
-<!--                    android:background="@android:color/transparent"-->
-<!--                    app:srcCompat="@drawable/paulbessett" />-->
+                <!--                <ImageButton-->
+                <!--                    android:id="@+id/paulbassettBtn"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_below="@id/line4"-->
+                <!--                    android:background="@android:color/transparent"-->
+                <!--                    app:srcCompat="@drawable/paulbessett" />-->
 
                 <Button
                     android:id="@+id/insert_btn"
@@ -119,7 +122,6 @@
             </RelativeLayout>
         </ScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 
 </layout>

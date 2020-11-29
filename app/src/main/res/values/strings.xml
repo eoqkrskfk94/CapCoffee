@@ -2,4 +2,7 @@
     <string name="app_name">CapCoffee</string>
 
     <string name="nespresso">nespresso</string>
+    <string name="starbucks">starbucks</string>
+    <string name="illy">illy</string>
+    <string name="dunkin">dunkin</string>
 </resources>
