@@ -17,5 +17,6 @@ class NespressoTypeActivity : AppCompatActivity() {
         val binding: ActivityNespressoTypeBinding = DataBindingUtil.setContentView(this, R.layout.activity_nespresso_type)
         binding.viewModel = NespressoTypeViewModel()
 
+
     }
 }

@@ -22,9 +22,10 @@ data class CoffeeItem(val imageResourse: String,
                       val description4: String,
                       val description5: String,
                       val capType: String,
-                      val com_image1: String,
-                      val com_image2: String,
-                      val com_image3: String) : Parcelable {
+                      val comImage1: String,
+                      val comImage2: String,
+                      val comImage3: String) : Parcelable {
+
     constructor(parcel: Parcel) : this(
         parcel.readString(),
         parcel.readString(),
@@ -72,9 +73,9 @@ data class CoffeeItem(val imageResourse: String,
         parcel.writeString(description4)
         parcel.writeString(description5)
         parcel.writeString(capType)
-        parcel.writeString(com_image1)
-        parcel.writeString(com_image2)
-        parcel.writeString(com_image3)
+        parcel.writeString(comImage1)
+        parcel.writeString(comImage2)
+        parcel.writeString(comImage3)
     }
 
     override fun describeContents(): Int {
