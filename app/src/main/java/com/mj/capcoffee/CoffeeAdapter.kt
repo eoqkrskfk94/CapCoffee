@@ -28,14 +28,14 @@ class CoffeeAdapter(val context: Context, val coffeelist: List<CoffeeItem>, val 
     override fun getItemCount() = coffeelist.size
 
     inner class CoffeeViewHolder(itemView: View, itemClick: (CoffeeItem) -> Unit) : RecyclerView.ViewHolder(itemView){
-        val imageView: ImageView = itemView.image_view
-        val intensityView: ImageView = itemView.intensity_view
-        val nameView: TextView = itemView.item_name
-        val ristretto: ImageView = itemView.ristrettoView
-        val espresso: ImageView = itemView.espressoView
-        val lungo: ImageView = itemView.lungoView
-        val sideName: TextView = itemView.short_description
-        val intensityLay: LinearLayout = itemView.intensityLayout
+        private val imageView: ImageView = itemView.image_view
+        private val intensityView: ImageView = itemView.intensity_view
+        private val nameView: TextView = itemView.item_name
+        private val ristretto: ImageView = itemView.ristrettoView
+        private val espresso: ImageView = itemView.espressoView
+        private val lungo: ImageView = itemView.lungoView
+        private val sideName: TextView = itemView.short_description
+        private val intensityLay: LinearLayout = itemView.intensityLayout
 
         fun bind(coffeeitem: CoffeeItem, context: Context){
             Glide.with(context).load(coffeeitem.imageResourse).into(imageView)
