@@ -3,8 +3,11 @@ package com.mj.capcoffee
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.databinding.DataBindingUtil
 import com.bumptech.glide.Glide
+import com.mj.capcoffee.databinding.ActivityCoffeeDetailBinding
 import com.mj.capcoffee.datas.CoffeeItem
+import com.mj.capcoffee.viewModel.CoffeeDetailViewModel
 import kotlinx.android.synthetic.main.activity_coffee_detail.*
 
 class CoffeeDetailActivity : AppCompatActivity() {
@@ -12,6 +15,8 @@ class CoffeeDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_coffee_detail)
+        val binding: ActivityCoffeeDetailBinding = DataBindingUtil.setContentView(this, R.layout.activity_coffee_detail)
+        binding.viewModel = CoffeeDetailViewModel()
 
         var intent = intent
         val coffee = intent.getParcelableExtra<CoffeeItem>("coffee")
@@ -32,6 +37,9 @@ class CoffeeDetailActivity : AppCompatActivity() {
         description_3.text = coffee.description3.replace("\\n","\n")
         description_4.text = coffee.description4.replace("\\n","\n")
         description_5.text = coffee.description5.replace("\\n","\n")
+
+        println(coffee.com_image1)
+
 
         if(coffee.com_image1 != "") Glide.with(this).load(coffee.com_image1).into(description2_image)
         if(coffee.com_image2 != "") Glide.with(this).load(coffee.com_image2).into(description3_image)
