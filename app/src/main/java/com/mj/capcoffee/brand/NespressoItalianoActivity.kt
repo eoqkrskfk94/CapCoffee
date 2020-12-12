@@ -39,7 +39,7 @@ class NespressoItalianoActivity : AppCompatActivity() {
                             this,
                             CoffeeDetailActivity::class.java
                         )
-                        intent.putExtra("Brand", "Nespresso")
+                        intent.putExtra("brand", "Nespresso")
 
                         intent.putExtra("coffee", coffeeItem)
                         startActivity(intent)

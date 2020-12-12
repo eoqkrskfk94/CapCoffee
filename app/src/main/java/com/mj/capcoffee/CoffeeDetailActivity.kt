@@ -24,7 +24,7 @@ class CoffeeDetailActivity : AppCompatActivity() {
 
         var intent = intent
         coffee = intent.getParcelableExtra<CoffeeItem>("coffee")
-        val brand = intent.getStringExtra("Brand")
+        val brand = intent.getStringExtra("brand")
 
 
         Glide.with(this).load(coffee.imageResourse).into(binding.coffeeImage)
@@ -104,7 +104,7 @@ class CoffeeDetailActivity : AppCompatActivity() {
     private fun setBrandTexts(brand: String){
 
         // 일리 브랜드
-        if (brand == "Illy"){
+        if (brand == getString(R.string.illy)){
             binding.tvDescription2Title.text = "주석 합금캔을 이용한 질수 압축공법"
             binding.tvDescription3Title.text = "파트너쉽을 통한 구품질 생두 공급"
             binding.tvDescription4Title.text = "9가지 100% 아라비카 원드 블랜딩"
@@ -112,7 +112,7 @@ class CoffeeDetailActivity : AppCompatActivity() {
         }
 
         // 던킨 브랜드
-        if (brand == "Dunkin"){
+        if (brand == getString(R.string.dunkin)){
             binding.tvDescription2Title.text = "원재료명 및 함량"
             binding.tvDescription3Title.text = "내용량"
             binding.tvDescription4Title.text = "Aroma Sealing"
@@ -121,12 +121,22 @@ class CoffeeDetailActivity : AppCompatActivity() {
         }
 
         // 스타벅스 브랜드
-        if(brand == "Starbucks"){
+        if(brand == getString(R.string.starbucks)){
             binding.tvDescription2Title.text = "스타벅스 알루미늄을 사용하는 이유가 뭘까요?"
             binding.tvDescription3Title.text = "캡슐을 재활용하세요"
             binding.tvDescription4Title.text = "커피에 관련해 궁금한 점이 있나요?"
             binding.tvDescription5Title.visibility = View.GONE
         }
 
+        // 폴바셋 브랜드
+        if(brand == getString(R.string.paulBassett)){
+            binding.tvDescription2Title.text = "완전히 새로워진 폴 바셋 바리스타 캡슐"
+            binding.tvDescription3Title.text = "이제 당신의 네스프레소 마신에서도"
+            binding.tvDescription4Title.text = "풍부한 플레이버를 담은 캡슐 한 잔"
+            binding.tvDescription5Title.visibility = View.GONE
+        }
+
     }
 }
+
+

@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.view.View
 import androidx.core.content.ContextCompat.startActivity
+import com.mj.capcoffee.CoffeeListActivity
 import com.mj.capcoffee.R
 import com.mj.capcoffee.brand.*
 
@@ -15,11 +16,25 @@ class MainViewModel {
 
         when(brand){
 
-            view.context.getString(R.string.nespresso) -> intent = Intent(view.context, NespressoTypeActivity::class.java)
-            view.context.getString(R.string.starbucks) -> intent = Intent(view.context, StarbucksActivity::class.java)
-            view.context.getString(R.string.illy) -> intent = Intent(view.context, IllyActivity::class.java)
-            view.context.getString(R.string.dunkin) -> intent = Intent(view.context, DunkinActivity::class.java)
-            view.context.getString(R.string.paulBassett) -> intent = Intent(view.context, PaulBassettActivity::class.java)
+            view.context.getString(R.string.nespresso) -> {
+                intent = Intent(view.context, NespressoTypeActivity::class.java)
+            }
+            view.context.getString(R.string.starbucks) -> {
+                intent = Intent(view.context, CoffeeListActivity::class.java)
+                intent.putExtra("brand", view.context.getString(R.string.starbucks))
+            }
+            view.context.getString(R.string.illy) -> {
+                intent = Intent(view.context, CoffeeListActivity::class.java)
+                intent.putExtra("brand", view.context.getString(R.string.illy))
+            }
+            view.context.getString(R.string.dunkin) -> {
+                intent = Intent(view.context, CoffeeListActivity::class.java)
+                intent.putExtra("brand", view.context.getString(R.string.dunkin))
+            }
+            view.context.getString(R.string.paulBassett) -> {
+                intent = Intent(view.context, CoffeeListActivity::class.java)
+                intent.putExtra("brand", view.context.getString(R.string.paulBassett))
+            }
 
         }
 
