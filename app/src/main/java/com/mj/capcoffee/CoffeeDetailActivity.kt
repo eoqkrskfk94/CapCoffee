@@ -12,70 +12,60 @@ import kotlinx.android.synthetic.main.activity_coffee_detail.*
 
 class CoffeeDetailActivity : AppCompatActivity() {
 
+    lateinit var binding: ActivityCoffeeDetailBinding
+    lateinit var coffee: CoffeeItem
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_coffee_detail)
-        val binding: ActivityCoffeeDetailBinding = DataBindingUtil.setContentView(this, R.layout.activity_coffee_detail)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_coffee_detail)
         binding.viewModel = CoffeeDetailViewModel()
 
+
         var intent = intent
-        val coffee = intent.getParcelableExtra<CoffeeItem>("coffee")
-        println("here")
-        println(coffee.imageResourse)
-        Glide.with(this).load(coffee.imageResourse).into(coffee_image)
-        coffee_name.text = coffee.capsule_name
-        short_description.text = coffee.side_name.replace("\\n","\n")
-        Glide.with(this).load(coffee.intensityImage).into(intensity_view)
-        if (coffee.intensity == 0) intensityView.visibility = View.GONE
-        if (coffee.ristretto == 0) ristretto_view.setImageAlpha(50)
-        if (coffee.espresso == 0) espresso_view.setImageAlpha(50)
-        if (coffee.lungo == 0) lungo_view.setImageAlpha(50)
-        side_title.text = coffee.side_title.replace("\\n","\n")
-        capTypetxt.text = coffee.capType
-        description_1.text = coffee.description1.replace("\\n","\n")
-        description_2.text = coffee.description2.replace("\\n","\n")
-        description_3.text = coffee.description3.replace("\\n","\n")
-        description_4.text = coffee.description4.replace("\\n","\n")
-        description_5.text = coffee.description5.replace("\\n","\n")
-
-        println(coffee.com_image1)
-
-
-        if(coffee.com_image1 != "") Glide.with(this).load(coffee.com_image1).into(description2_image)
-        if(coffee.com_image2 != "") Glide.with(this).load(coffee.com_image2).into(description3_image)
-        if(coffee.com_image3 != "") Glide.with(this).load(coffee.com_image3).into(description4_image)
-
-        if(coffee.com_image3 == "")description4_image.visibility = View.GONE
-
-
+        coffee = intent.getParcelableExtra<CoffeeItem>("coffee")
         val brand = intent.getStringExtra("Brand")
 
 
-        // 일리 브랜드
-        if (brand == "Illy"){
-            textView8.text = "주석 합금캔을 이용한 질수 압축공법"
-            textView9.text = "파트너쉽을 통한 구품질 생두 공급"
-            textView10.text = "9가지 100% 아라비카 원드 블랜딩"
-            textView11.text = "정보"
-        }
+        Glide.with(this).load(coffee.imageResourse).into(binding.coffeeImage)
+        binding.coffeeName.text = coffee.capsule_name
+        binding.shortDescription.text = coffee.side_name.replace("\\n","\n")
+        Glide.with(this).load(coffee.intensityImage).into(intensity_view)
 
-        // 던킨 브랜드
-        if (brand == "Dunkin"){
-            textView8.text = "원재료명 및 함량"
-            textView9.text = "내용량"
-            textView10.text = "Aroma Sealing"
-            textView11.visibility = View.GONE
-            description_5.visibility = View.GONE
-        }
 
-        // 스타벅스 브랜드
-        if(brand == "Starbucks"){
-            textView8.text = "스타벅스 알루미늄을 사용하는 이유가 뭘까요?"
-            textView9.text = "캡슐을 재활용하세요"
-            textView10.text = "커피에 관련해 궁금한 점이 있나요?"
-            textView11.visibility = View.GONE
-        }
+        if (coffee.intensity == 0) binding.intensityView.visibility = View.GONE
+        if (coffee.ristretto == 0) binding.ristrettoView.imageAlpha = 50
+        if (coffee.espresso == 0) binding.espressoView.imageAlpha = 50
+        if (coffee.lungo == 0) binding.lungoView.imageAlpha = 50
 
+
+
+        binding.sideTitle.text = coffee.side_title.replace("\\n","\n")
+        binding.capTypetxt.text = coffee.capType
+        binding.description1.text = coffee.description1.replace("\\n","\n")
+        binding.description2.text = coffee.description2.replace("\\n","\n")
+        binding.description3.text = coffee.description3.replace("\\n","\n")
+        binding.description4.text = coffee.description4.replace("\\n","\n")
+        binding.description5.text = coffee.description5.replace("\\n","\n")
+
+
+
+        if(coffee.com_image1 != "") Glide.with(this).load(coffee.com_image1).into(binding.description2Image)
+        if(coffee.com_image2 != "") Glide.with(this).load(coffee.com_image2).into(binding.description3Image)
+        if(coffee.com_image3 != "") Glide.with(this).load(coffee.com_image3).into(binding.description4Image)
+        if(coffee.com_image3 == "")binding.description4Image.visibility = View.GONE
+
+
+
+
+        setBrandTexts(brand)
+        setCoffeeRange()
+
+
+        back_btn.setOnClickListener { finish() }
+    }
+
+    private fun setCoffeeRange(){
         when (coffee.roasting){
             0 -> styleView1.visibility = View.GONE
             1 -> roasting.setImageResource(R.drawable.inten_1)
@@ -109,7 +99,34 @@ class CoffeeDetailActivity : AppCompatActivity() {
             4 -> body.setImageResource(R.drawable.inten_4)
             5 -> body.setImageResource(R.drawable.inten_5)
         }
+    }
 
-        back_btn.setOnClickListener { finish() }
+    private fun setBrandTexts(brand: String){
+
+        // 일리 브랜드
+        if (brand == "Illy"){
+            binding.tvDescription2Title.text = "주석 합금캔을 이용한 질수 압축공법"
+            binding.tvDescription3Title.text = "파트너쉽을 통한 구품질 생두 공급"
+            binding.tvDescription4Title.text = "9가지 100% 아라비카 원드 블랜딩"
+            binding.tvDescription5Title.text = "정보"
+        }
+
+        // 던킨 브랜드
+        if (brand == "Dunkin"){
+            binding.tvDescription2Title.text = "원재료명 및 함량"
+            binding.tvDescription3Title.text = "내용량"
+            binding.tvDescription4Title.text = "Aroma Sealing"
+            binding.tvDescription5Title.visibility = View.GONE
+            binding.description5.visibility = View.GONE
+        }
+
+        // 스타벅스 브랜드
+        if(brand == "Starbucks"){
+            binding.tvDescription2Title.text = "스타벅스 알루미늄을 사용하는 이유가 뭘까요?"
+            binding.tvDescription3Title.text = "캡슐을 재활용하세요"
+            binding.tvDescription4Title.text = "커피에 관련해 궁금한 점이 있나요?"
+            binding.tvDescription5Title.visibility = View.GONE
+        }
+
     }
 }

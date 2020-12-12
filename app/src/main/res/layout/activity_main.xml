@@ -94,31 +94,34 @@
                     app:srcCompat="@drawable/dunkin" />
 
 
-                <!--                <ImageView-->
-                <!--                    android:id="@+id/line4"-->
-                <!--                    android:layout_width="wrap_content"-->
-                <!--                    android:layout_height="wrap_content"-->
-                <!--                    android:layout_below="@id/dunkinBtn"-->
-                <!--                    android:layout_centerHorizontal="true"-->
-                <!--                    android:layout_marginTop="25dp"-->
-                <!--                    android:layout_marginBottom="25dp"-->
-                <!--                    app:srcCompat="@drawable/line" />-->
+                <ImageView
+                    android:id="@+id/line4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dunkinBtn"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="25dp"
+                    app:srcCompat="@drawable/line" />
 
-                <!--                <ImageButton-->
-                <!--                    android:id="@+id/paulbassettBtn"-->
-                <!--                    android:layout_width="match_parent"-->
-                <!--                    android:layout_height="wrap_content"-->
-                <!--                    android:layout_below="@id/line4"-->
-                <!--                    android:background="@android:color/transparent"-->
-                <!--                    app:srcCompat="@drawable/paulbessett" />-->
+                <ImageButton
+                    android:id="@+id/paulbassettBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line4"
+                    android:background="@android:color/transparent"
+                    android:onClick="@{()->viewModel.brandBtnClick(@string/paulBassett, paulbassettBtn)}"
+                    app:srcCompat="@drawable/paulbessett" />
 
                 <Button
                     android:id="@+id/insert_btn"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="80dp"
                     android:layout_below="@id/dunkinBtn"
                     android:text="Button"
                     android:visibility="gone" />
+
+
             </RelativeLayout>
         </ScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>

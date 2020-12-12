@@ -5,10 +5,7 @@ import android.content.Intent
 import android.view.View
 import androidx.core.content.ContextCompat.startActivity
 import com.mj.capcoffee.R
-import com.mj.capcoffee.brand.DunkinActivity
-import com.mj.capcoffee.brand.IllyActivity
-import com.mj.capcoffee.brand.NespressoTypeActivity
-import com.mj.capcoffee.brand.StarbucksActivity
+import com.mj.capcoffee.brand.*
 
 class MainViewModel {
 
@@ -22,6 +19,7 @@ class MainViewModel {
             view.context.getString(R.string.starbucks) -> intent = Intent(view.context, StarbucksActivity::class.java)
             view.context.getString(R.string.illy) -> intent = Intent(view.context, IllyActivity::class.java)
             view.context.getString(R.string.dunkin) -> intent = Intent(view.context, DunkinActivity::class.java)
+            view.context.getString(R.string.paulBassett) -> intent = Intent(view.context, PaulBassettActivity::class.java)
 
         }
 

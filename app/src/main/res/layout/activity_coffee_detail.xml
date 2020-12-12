@@ -295,7 +295,7 @@
                     app:srcCompat="@drawable/nes_arpeggio" />
 
                 <TextView
-                    android:id="@+id/textView8"
+                    android:id="@+id/tv_description_2_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
@@ -322,7 +322,7 @@
                     app:srcCompat="@drawable/nes_arpeggio" />
 
                 <TextView
-                    android:id="@+id/textView9"
+                    android:id="@+id/tv_description_3_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
@@ -349,7 +349,7 @@
                     app:srcCompat="@drawable/nes_arpeggio" />
 
                 <TextView
-                    android:id="@+id/textView10"
+                    android:id="@+id/tv_description_4_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
@@ -370,7 +370,7 @@
                     android:textColor="#000000" />
 
                 <TextView
-                    android:id="@+id/textView11"
+                    android:id="@+id/tv_description_5_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
