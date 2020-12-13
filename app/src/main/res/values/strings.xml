@@ -12,4 +12,6 @@
     <string name="barista">barista</string>
     <string name="iltaliano">dunkin</string>
     <string name="espresso_lungo">espresso lungo</string>
+    <string name="naver_view">네이버 VIEW</string>
+    <string name="naver_price">최저가 보러가기</string>
 </resources>

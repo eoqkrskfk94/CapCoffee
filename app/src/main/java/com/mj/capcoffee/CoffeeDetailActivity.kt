@@ -27,33 +27,33 @@ class CoffeeDetailActivity : AppCompatActivity() {
         val brand = intent.getStringExtra("brand")
 
 
-        Glide.with(this).load(coffee.imageResourse).into(binding.coffeeImage)
-        binding.coffeeName.text = coffee.capsule_name
-        binding.shortDescription.text = coffee.side_name.replace("\\n","\n")
-        Glide.with(this).load(coffee.intensityImage).into(intensity_view)
+        Glide.with(this).load(coffee.imageResourse).into(binding.ivCoffeeImage)
+        binding.tvCoffeeName.text = coffee.capsule_name
+        binding.tvShortDescription.text = coffee.side_name.replace("\\n","\n")
+        Glide.with(this).load(coffee.intensityImage).into(iv_intensity_view)
 
 
-        if (coffee.intensity == 0) binding.intensityView.visibility = View.GONE
-        if (coffee.ristretto == 0) binding.ristrettoView.imageAlpha = 50
-        if (coffee.espresso == 0) binding.espressoView.imageAlpha = 50
-        if (coffee.lungo == 0) binding.lungoView.imageAlpha = 50
-
-
-
-        binding.sideTitle.text = coffee.side_title.replace("\\n","\n")
-        binding.capTypetxt.text = coffee.capType
-        binding.description1.text = coffee.description1.replace("\\n","\n")
-        binding.description2.text = coffee.description2.replace("\\n","\n")
-        binding.description3.text = coffee.description3.replace("\\n","\n")
-        binding.description4.text = coffee.description4.replace("\\n","\n")
-        binding.description5.text = coffee.description5.replace("\\n","\n")
+        if (coffee.intensity == 0) binding.ivIntensityView.visibility = View.GONE
+        if (coffee.ristretto == 0) binding.ivRistretto.imageAlpha = 50
+        if (coffee.espresso == 0) binding.ivEspresso.imageAlpha = 50
+        if (coffee.lungo == 0) binding.ivLungo.imageAlpha = 50
 
 
 
-        if(coffee.com_image1 != "") Glide.with(this).load(coffee.com_image1).into(binding.description2Image)
-        if(coffee.com_image2 != "") Glide.with(this).load(coffee.com_image2).into(binding.description3Image)
-        if(coffee.com_image3 != "") Glide.with(this).load(coffee.com_image3).into(binding.description4Image)
-        if(coffee.com_image3 == "")binding.description4Image.visibility = View.GONE
+        binding.tvSideTitle.text = coffee.side_title.replace("\\n","\n")
+        binding.tvCapType.text = coffee.capType
+        binding.tvDescription1.text = coffee.description1.replace("\\n","\n")
+        binding.tvDescription2.text = coffee.description2.replace("\\n","\n")
+        binding.tvDescription3.text = coffee.description3.replace("\\n","\n")
+        binding.tvDescription4.text = coffee.description4.replace("\\n","\n")
+        binding.tvDescription5.text = coffee.description5.replace("\\n","\n")
+
+
+
+        if(coffee.com_image1 != "") Glide.with(this).load(coffee.com_image1).into(binding.ivDescription2)
+        if(coffee.com_image2 != "") Glide.with(this).load(coffee.com_image2).into(binding.ivDescription3)
+        if(coffee.com_image3 != "") Glide.with(this).load(coffee.com_image3).into(binding.ivDescription4)
+        if(coffee.com_image3 == "")binding.tvDescription4.visibility = View.GONE
 
 
 
@@ -62,42 +62,42 @@ class CoffeeDetailActivity : AppCompatActivity() {
         setCoffeeRange()
 
 
-        back_btn.setOnClickListener { finish() }
+        btn_back.setOnClickListener { finish() }
     }
 
     private fun setCoffeeRange(){
-        when (coffee.roasting){
-            0 -> styleView1.visibility = View.GONE
-            1 -> roasting.setImageResource(R.drawable.inten_1)
-            2 -> roasting.setImageResource(R.drawable.inten_2)
-            3 -> roasting.setImageResource(R.drawable.inten_3)
-            4 -> roasting.setImageResource(R.drawable.inten_4)
-            5 -> roasting.setImageResource(R.drawable.inten_5)
+        when (coffee.roasting) {
+            0 -> binding.llStyleView1.visibility = View.GONE
+            1 -> binding.ivRoasting.setImageResource(R.drawable.inten_1)
+            2 -> binding.ivRoasting.setImageResource(R.drawable.inten_2)
+            3 -> binding.ivRoasting.setImageResource(R.drawable.inten_3)
+            4 -> binding.ivRoasting.setImageResource(R.drawable.inten_4)
+            5 -> binding.ivRoasting.setImageResource(R.drawable.inten_5)
         }
 
         when (coffee.bitterness){
-            1 -> bitterness.setImageResource(R.drawable.inten_1)
-            2 -> bitterness.setImageResource(R.drawable.inten_2)
-            3 -> bitterness.setImageResource(R.drawable.inten_3)
-            4 -> bitterness.setImageResource(R.drawable.inten_4)
-            5 -> bitterness.setImageResource(R.drawable.inten_5)
+            1 -> binding.ivBitterness.setImageResource(R.drawable.inten_1)
+            2 -> binding.ivBitterness.setImageResource(R.drawable.inten_2)
+            3 -> binding.ivBitterness.setImageResource(R.drawable.inten_3)
+            4 -> binding.ivBitterness.setImageResource(R.drawable.inten_4)
+            5 -> binding.ivBitterness.setImageResource(R.drawable.inten_5)
         }
 
         when (coffee.sourness){
-            0 -> styleView2.visibility = View.GONE
-            1 -> sourness.setImageResource(R.drawable.inten_1)
-            2 -> sourness.setImageResource(R.drawable.inten_2)
-            3 -> sourness.setImageResource(R.drawable.inten_3)
-            4 -> sourness.setImageResource(R.drawable.inten_4)
-            5 -> sourness.setImageResource(R.drawable.inten_5)
+            0 -> binding.llStyleView2.visibility = View.GONE
+            1 -> iv_sourness.setImageResource(R.drawable.inten_1)
+            2 -> iv_sourness.setImageResource(R.drawable.inten_2)
+            3 -> iv_sourness.setImageResource(R.drawable.inten_3)
+            4 -> iv_sourness.setImageResource(R.drawable.inten_4)
+            5 -> iv_sourness.setImageResource(R.drawable.inten_5)
         }
 
         when (coffee.body){
-            1 -> body.setImageResource(R.drawable.inten_1)
-            2 -> body.setImageResource(R.drawable.inten_2)
-            3 -> body.setImageResource(R.drawable.inten_3)
-            4 -> body.setImageResource(R.drawable.inten_4)
-            5 -> body.setImageResource(R.drawable.inten_5)
+            1 -> iv_body.setImageResource(R.drawable.inten_1)
+            2 -> iv_body.setImageResource(R.drawable.inten_2)
+            3 -> iv_body.setImageResource(R.drawable.inten_3)
+            4 -> iv_body.setImageResource(R.drawable.inten_4)
+            5 -> iv_body.setImageResource(R.drawable.inten_5)
         }
     }
 
@@ -107,7 +107,7 @@ class CoffeeDetailActivity : AppCompatActivity() {
         binding.tvDescription3Title.text = coffee.description3_title
         binding.tvDescription4Title.text = coffee.description4_title
 
-        if(coffee.description5 == "") binding.description5.visibility = View.GONE
+        if(coffee.description5 == "") binding.tvDescription5.visibility = View.GONE
         if(coffee.description5_title == "") binding.tvDescription5Title.visibility = View.GONE
 
         binding.tvDescription5Title.text = coffee.description5_title

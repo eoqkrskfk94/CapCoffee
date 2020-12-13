@@ -11,27 +11,27 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".CoffeeListActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+            android:theme="@style/MainTheme"/>
         <activity
             android:name=".brand.PaulBassettActivity" />
         <activity
             android:name=".brand.NespressoBaristaActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/MainTheme"/>
         <activity
             android:name=".brand.NespressoTypeActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/MainTheme"/>
         <activity
             android:name=".brand.StarbucksActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/MainTheme"/>
         <activity
             android:name=".brand.DunkinActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/MainTheme"/>
         <activity
             android:name=".brand.IllyActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/MainTheme"/>
         <activity
             android:name=".CoffeeDetailActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/MainTheme"/>
         <activity
             android:name=".SplashActivity"
             android:theme="@style/SplashTheme">
@@ -43,10 +43,10 @@
         </activity>
         <activity
             android:name=".brand.NespressoItalianoActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/MainTheme"/>
         <activity
             android:name=".MainActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/MainTheme"/>
     </application>
 
 </manifest>
