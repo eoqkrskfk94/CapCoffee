@@ -9,6 +9,14 @@
             name="viewModel"
             type="com.mj.capcoffee.viewModel.CoffeeDetailViewModel" />
 
+        <variable
+            name="coffee"
+            type="com.mj.capcoffee.datas.CoffeeItem" />
+
+        <variable
+            name="brand"
+            type="String" />
+
     </data>
 
     <RelativeLayout
@@ -161,6 +169,7 @@
                         android:text="@string/naver_view"
                         android:textColor="@color/white"
                         app:cornerRadius="15dp"
+                        android:onClick="@{()->viewModel.clickNaverViewBtn(coffee.capsule_name, brand ,btnNaverBlog)}"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@id/btn_naver_price"
                         app:layout_constraintHorizontal_chainStyle="spread"

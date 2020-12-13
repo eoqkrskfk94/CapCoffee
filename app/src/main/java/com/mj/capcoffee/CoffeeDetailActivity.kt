@@ -26,6 +26,9 @@ class CoffeeDetailActivity : AppCompatActivity() {
         coffee = intent.getParcelableExtra<CoffeeItem>("coffee")
         val brand = intent.getStringExtra("brand")
 
+        binding.coffee = coffee
+        binding.brand = brand
+
 
         Glide.with(this).load(coffee.imageResourse).into(binding.ivCoffeeImage)
         binding.tvCoffeeName.text = coffee.capsule_name

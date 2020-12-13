@@ -2,12 +2,17 @@
     <string name="app_name">CapCoffee</string>
 
 
-
     <string name="nespresso">nespresso</string>
     <string name="starbucks">starbucks</string>
     <string name="illy">illy</string>
     <string name="dunkin">dunkin</string>
     <string name="paulBassett">paul_bassett</string>
+
+    <string name="nespresso_kr">네스프레소</string>
+    <string name="starbucks_kr">스타벅스</string>
+    <string name="illy_kr">일리</string>
+    <string name="dunkin_kr">던킨 도너츠</string>
+    <string name="paulBassett_kr">폴바셋</string>
 
     <string name="barista">barista</string>
     <string name="iltaliano">dunkin</string>
