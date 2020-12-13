@@ -29,13 +29,6 @@
             android:layout_weight="1"
             app:srcCompat="@drawable/title" />
 
-        <ImageButton
-            android:id="@+id/back_btn2"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="#00000000"
-            android:visibility="invisible"
-            app:srcCompat="?attr/actionModeCloseDrawable" />
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView

@@ -24,11 +24,11 @@
             android:orientation="horizontal">
 
             <ImageButton
-                android:id="@+id/back_btn"
+                android:id="@+id/btn_back"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:background="#00000000"
-                android:onClick="@{()->viewModel.clickBackBtn(backBtn)}"
+                android:onClick="@{()->viewModel.clickBackBtn(btnBack)}"
                 app:srcCompat="?attr/actionModeCloseDrawable" />
 
             <ImageView

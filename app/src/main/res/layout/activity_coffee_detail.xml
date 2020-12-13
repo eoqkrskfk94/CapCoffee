@@ -36,6 +36,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:background="#00000000"
+                android:onClick="@{()->viewModel.clickBackBtn(btnBack)}"
                 app:srcCompat="?attr/actionModeCloseDrawable" />
 
             <ImageView
@@ -44,6 +45,13 @@
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/title" />
+
+            <ImageButton
+                android:visibility="invisible"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="#00000000"
+                app:srcCompat="?attr/actionModeCloseDrawable" />
 
 
         </LinearLayout>
@@ -166,10 +174,10 @@
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="5dp"
                         android:backgroundTint="@color/naver"
+                        android:onClick="@{()->viewModel.clickNaverViewBtn(coffee.capsule_name, brand ,btnNaverBlog)}"
                         android:text="@string/naver_view"
                         android:textColor="@color/white"
                         app:cornerRadius="15dp"
-                        android:onClick="@{()->viewModel.clickNaverViewBtn(coffee.capsule_name, brand ,btnNaverBlog)}"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@id/btn_naver_price"
                         app:layout_constraintHorizontal_chainStyle="spread"
@@ -184,6 +192,7 @@
                         android:layout_marginEnd="10dp"
                         android:layout_weight="1"
                         android:backgroundTint="@color/blue"
+                        android:onClick="@{()->viewModel.clickNaverPriceBtn(coffee.capsule_name, brand ,btnNaverPrice)}"
                         android:text="@string/naver_price"
                         android:textColor="@color/white"
                         app:cornerRadius="15dp"
