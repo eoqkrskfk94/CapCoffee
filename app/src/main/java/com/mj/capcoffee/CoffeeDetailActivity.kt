@@ -36,7 +36,7 @@ class CoffeeDetailActivity : AppCompatActivity() {
         Glide.with(this).load(coffee.intensityImage).into(iv_intensity_view)
 
 
-        if (coffee.intensity == 0) binding.ivIntensityView.visibility = View.GONE
+        if (coffee.intensity == 0) binding.llIntensityView.visibility = View.GONE
         if (coffee.ristretto == 0) binding.ivRistretto.imageAlpha = 50
         if (coffee.espresso == 0) binding.ivEspresso.imageAlpha = 50
         if (coffee.lungo == 0) binding.ivLungo.imageAlpha = 50
