@@ -3,9 +3,8 @@ package com.mj.capcoffee.viewModel
 import android.app.Activity
 import android.content.Intent
 import android.view.View
+import com.mj.capcoffee.CoffeeListActivity
 import com.mj.capcoffee.R
-import com.mj.capcoffee.brand.NespressoBaristaActivity
-import com.mj.capcoffee.brand.NespressoItalianoActivity
 
 class NespressoTypeViewModel {
 
@@ -15,9 +14,18 @@ class NespressoTypeViewModel {
 
         when(type){
 
-            view.context.getString(R.string.barista) -> intent = Intent(view.context, NespressoBaristaActivity::class.java)
-            view.context.getString(R.string.iltaliano) -> intent = Intent(view.context, NespressoItalianoActivity::class.java)
-            //view.context.getString(R.string.espresso_lungo) -> intent = Intent(view.context, NespressoBaristaActivity::class.java)
+            view.context.getString(R.string.nespresso) -> {
+                intent = Intent(view.context, CoffeeListActivity::class.java)
+                intent.putExtra("brand", view.context.getString(R.string.nespresso))
+            }
+            view.context.getString(R.string.nespresso_barista) -> {
+                intent = Intent(view.context, CoffeeListActivity::class.java)
+                intent.putExtra("brand", view.context.getString(R.string.nespresso_barista))
+            }
+            view.context.getString(R.string.nespresso_espresso) -> {
+                intent = Intent(view.context, CoffeeListActivity::class.java)
+                intent.putExtra("brand", view.context.getString(R.string.nespresso_espresso))
+            }
 
             }
 

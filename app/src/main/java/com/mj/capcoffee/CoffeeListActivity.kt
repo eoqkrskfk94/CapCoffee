@@ -8,10 +8,8 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mj.capcoffee.databinding.ActivityCoffeeListBinding
-import com.mj.capcoffee.datas.CoffeeItem
 import com.mj.capcoffee.viewModel.CoffeeListViewModel
-import kotlinx.android.synthetic.main.activity_coffee_detail.*
-import kotlinx.android.synthetic.main.activity_nespresso.*
+import kotlinx.android.synthetic.main.activity_coffee_list.*
 
 class CoffeeListActivity : AppCompatActivity() {
 

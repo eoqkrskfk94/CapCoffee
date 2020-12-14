@@ -13,27 +13,12 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".WebViewActivity"
-            android:theme="@style/MainTheme" />
+
         <activity
             android:name=".CoffeeListActivity"
             android:theme="@style/MainTheme" />
-        <activity android:name=".brand.PaulBassettActivity" />
         <activity
-            android:name=".brand.NespressoBaristaActivity"
-            android:theme="@style/MainTheme" />
-        <activity
-            android:name=".brand.NespressoTypeActivity"
-            android:theme="@style/MainTheme" />
-        <activity
-            android:name=".brand.StarbucksActivity"
-            android:theme="@style/MainTheme" />
-        <activity
-            android:name=".brand.DunkinActivity"
-            android:theme="@style/MainTheme" />
-        <activity
-            android:name=".brand.IllyActivity"
+            android:name=".NespressoTypeActivity"
             android:theme="@style/MainTheme" />
         <activity
             android:name=".CoffeeDetailActivity"
@@ -47,9 +32,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".brand.NespressoItalianoActivity"
-            android:theme="@style/MainTheme" />
+
         <activity
             android:name=".MainActivity"
             android:theme="@style/MainTheme" />

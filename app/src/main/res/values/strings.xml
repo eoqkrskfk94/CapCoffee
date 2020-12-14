@@ -3,6 +3,8 @@
 
 
     <string name="nespresso">nespresso</string>
+    <string name="nespresso_espresso">nespresso_espresso</string>
+    <string name="nespresso_barista">nespresso_barista</string>
     <string name="starbucks">starbucks</string>
     <string name="illy">illy</string>
     <string name="dunkin">dunkin</string>

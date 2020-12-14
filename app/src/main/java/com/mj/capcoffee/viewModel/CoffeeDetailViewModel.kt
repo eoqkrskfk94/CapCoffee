@@ -18,6 +18,7 @@ class CoffeeDetailViewModel {
         else if(brandName == (view.context as Activity).getString(R.string.nespresso)) brandName = (view.context as Activity).getString(R.string.nespresso_kr)
         else if(brandName == (view.context as Activity).getString(R.string.dunkin)) brandName = (view.context as Activity).getString(R.string.dunkin_kr)
         else if(brandName == (view.context as Activity).getString(R.string.paulBassett)) brandName = (view.context as Activity).getString(R.string.paulBassett_kr)
+        else if(brandName == (view.context as Activity).getString(R.string.nespresso_espresso)) brandName = (view.context as Activity).getString(R.string.nespresso_kr)
 
 
         coffeeName = "$brandName $coffeeName 캡슐"
@@ -43,6 +44,7 @@ class CoffeeDetailViewModel {
         else if(brandName == (view.context as Activity).getString(R.string.nespresso)) brandName = (view.context as Activity).getString(R.string.nespresso_kr)
         else if(brandName == (view.context as Activity).getString(R.string.dunkin)) brandName = (view.context as Activity).getString(R.string.dunkin_kr)
         else if(brandName == (view.context as Activity).getString(R.string.paulBassett)) brandName = (view.context as Activity).getString(R.string.paulBassett_kr)
+        else if(brandName == (view.context as Activity).getString(R.string.nespresso_espresso)) brandName = (view.context as Activity).getString(R.string.nespresso_kr)
 
 
         coffeeName = "$brandName $coffeeName 캡슐"
