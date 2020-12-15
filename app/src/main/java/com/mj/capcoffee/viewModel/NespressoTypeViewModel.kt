@@ -27,6 +27,12 @@ class NespressoTypeViewModel {
                 intent.putExtra("brand", view.context.getString(R.string.nespresso_espresso))
             }
 
+            view.context.getString(R.string.nespresso_master) -> {
+                intent = Intent(view.context, CoffeeListActivity::class.java)
+                intent.putExtra("brand", view.context.getString(R.string.nespresso_master))
+
+            }
+
             }
 
         if (intent != null) view.context.startActivity(intent)

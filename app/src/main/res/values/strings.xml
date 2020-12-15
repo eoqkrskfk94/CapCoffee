@@ -5,10 +5,12 @@
     <string name="nespresso">nespresso</string>
     <string name="nespresso_espresso">nespresso_espresso</string>
     <string name="nespresso_barista">nespresso_barista</string>
+    <string name="nespresso_master">nespresso_master</string>
     <string name="starbucks">starbucks</string>
     <string name="illy">illy</string>
     <string name="dunkin">dunkin</string>
     <string name="paulBassett">paul_bassett</string>
+    <string name="twosome">twosome</string>
 
     <string name="nespresso_kr">네스프레소</string>
     <string name="starbucks_kr">스타벅스</string>

@@ -30,7 +30,7 @@
                     android:id="@+id/nespressoBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="50dp"
+                    android:layout_marginTop="30dp"
                     android:background="@android:color/transparent"
                     android:onClick="@{()->viewModel.brandBtnClick(@string/nespresso, nespressoBtn)}"
                     app:srcCompat="@drawable/nespresso" />
@@ -113,14 +113,25 @@
                     android:onClick="@{()->viewModel.brandBtnClick(@string/paulBassett, paulbassettBtn)}"
                     app:srcCompat="@drawable/paulbessett" />
 
-                <Button
-                    android:id="@+id/insert_btn"
+                <ImageView
+                    android:id="@+id/line5"
                     android:layout_width="wrap_content"
-                    android:layout_height="80dp"
-                    android:layout_below="@id/dunkinBtn"
-                    android:text="Button"
-                    android:visibility="gone" />
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/paulbassettBtn"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="25dp"
+                    app:srcCompat="@drawable/line" />
 
+                <ImageButton
+                    android:id="@+id/twosomeBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line5"
+                    android:layout_marginBottom="30dp"
+                    android:background="@android:color/transparent"
+                    android:onClick="@{()->viewModel.brandBtnClick(@string/twosome, twosomeBtn)}"
+                    app:srcCompat="@drawable/twosome" />
 
             </RelativeLayout>
         </ScrollView>
