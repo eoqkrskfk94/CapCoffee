@@ -70,7 +70,7 @@
                     android:id="@+id/iv_coffee_image"
                     android:layout_width="match_parent"
                     android:layout_height="300dp"
-                    app:srcCompat="@drawable/nes_arpegio_decaf" />
+                    app:srcCompat="@drawable/nespresso" />
 
                 <TextView
                     android:id="@+id/tv_coffee_name"

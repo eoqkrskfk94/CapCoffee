@@ -32,7 +32,7 @@ class CoffeeDetailActivity : AppCompatActivity() {
 
         Glide.with(this).load(coffee.imageResourse).into(binding.ivCoffeeImage)
         binding.tvCoffeeName.text = coffee.capsule_name
-        binding.tvShortDescription.text = coffee.side_name.replace("\\n","\n")
+        binding.tvShortDescription.text = coffee.side_name?.replace("\\n","\n")
         Glide.with(this).load(coffee.intensityImage).into(iv_intensity_view)
 
 
@@ -43,13 +43,13 @@ class CoffeeDetailActivity : AppCompatActivity() {
 
 
 
-        binding.tvSideTitle.text = coffee.side_title.replace("\\n","\n")
+        binding.tvSideTitle.text = coffee.side_title?.replace("\\n","\n")
         binding.tvCapType.text = coffee.capType
-        binding.tvDescription1.text = coffee.description1.replace("\\n","\n")
-        binding.tvDescription2.text = coffee.description2.replace("\\n","\n")
-        binding.tvDescription3.text = coffee.description3.replace("\\n","\n")
-        binding.tvDescription4.text = coffee.description4.replace("\\n","\n")
-        binding.tvDescription5.text = coffee.description5.replace("\\n","\n")
+        binding.tvDescription1.text = coffee.description1?.replace("\\n","\n")
+        binding.tvDescription2.text = coffee.description2?.replace("\\n","\n")
+        binding.tvDescription3.text = coffee.description3?.replace("\\n","\n")
+        binding.tvDescription4.text = coffee.description4?.replace("\\n","\n")
+        binding.tvDescription5.text = coffee.description5?.replace("\\n","\n")
 
 
 

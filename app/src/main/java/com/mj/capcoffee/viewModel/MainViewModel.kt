@@ -33,6 +33,10 @@ class MainViewModel {
                 intent = Intent(view.context, CoffeeListActivity::class.java)
                 intent.putExtra("brand", view.context.getString(R.string.paulBassett))
             }
+            view.context.getString(R.string.twosome) -> {
+                intent = Intent(view.context, CoffeeListActivity::class.java)
+                intent.putExtra("brand", view.context.getString(R.string.twosome))
+            }
 
         }
 

@@ -3,10 +3,10 @@ package com.mj.capcoffee.datas
 import android.os.Parcel
 import android.os.Parcelable
 
-data class FirebaseItem(val imageResourse: String,
-                   val capsule_name : String,
+data class FirebaseItem(val imageResourse: String?,
+                   val capsule_name : String?,
                    val intensity: Int,
-                   val intensityImage: String,
+                   val intensityImage: String?,
                    val ristretto: Int,
                    val espresso: Int,
                    val lungo: Int,
@@ -14,14 +14,14 @@ data class FirebaseItem(val imageResourse: String,
                    val bitterness: Int,
                    val sourness: Int,
                    val body: Int,
-                   val side_name: String,
-                   val side_title: String,
-                   val description1: String,
-                   val description2: String,
-                   val description3: String,
-                   val description4: String,
-                   val description5: String,
-                   val capType: String) : Parcelable {
+                   val side_name: String?,
+                   val side_title: String?,
+                   val description1: String?,
+                   val description2: String?,
+                   val description3: String?,
+                   val description4: String?,
+                   val description5: String?,
+                   val capType: String?) : Parcelable {
 
     constructor(parcel : Parcel) : this(
         parcel.readString(),

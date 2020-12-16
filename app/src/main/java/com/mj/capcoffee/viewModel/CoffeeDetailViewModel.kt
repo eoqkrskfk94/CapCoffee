@@ -20,6 +20,7 @@ class CoffeeDetailViewModel {
         else if(brandName == (view.context as Activity).getString(R.string.paulBassett)) brandName = (view.context as Activity).getString(R.string.paulBassett_kr)
         else if(brandName == (view.context as Activity).getString(R.string.nespresso_espresso)) brandName = (view.context as Activity).getString(R.string.nespresso_kr)
         else if(brandName == (view.context as Activity).getString(R.string.nespresso_master)) brandName = (view.context as Activity).getString(R.string.nespresso_kr)
+        else if(brandName == (view.context as Activity).getString(R.string.twosome)) brandName = (view.context as Activity).getString(R.string.twosome_kr)
 
         coffeeName = "$brandName $coffeeName 캡슐"
         coffeeName = coffeeName.replace("\\s".toRegex(), "+")
@@ -46,6 +47,8 @@ class CoffeeDetailViewModel {
         else if(brandName == (view.context as Activity).getString(R.string.paulBassett)) brandName = (view.context as Activity).getString(R.string.paulBassett_kr)
         else if(brandName == (view.context as Activity).getString(R.string.nespresso_espresso)) brandName = (view.context as Activity).getString(R.string.nespresso_kr)
         else if(brandName == (view.context as Activity).getString(R.string.nespresso_master)) brandName = (view.context as Activity).getString(R.string.nespresso_kr)
+        else if(brandName == (view.context as Activity).getString(R.string.twosome)) brandName = (view.context as Activity).getString(R.string.twosome_kr)
+
 
 
         coffeeName = "$brandName $coffeeName 캡슐"
