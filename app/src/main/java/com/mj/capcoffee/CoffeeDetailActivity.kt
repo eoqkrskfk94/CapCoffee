@@ -3,8 +3,13 @@ package com.mj.capcoffee
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.bumptech.glide.Glide
+import com.google.android.gms.ads.AdListener
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 import com.mj.capcoffee.databinding.ActivityCoffeeDetailBinding
 import com.mj.capcoffee.datas.CoffeeItem
 import com.mj.capcoffee.viewModel.CoffeeDetailViewModel
@@ -14,6 +19,8 @@ class CoffeeDetailActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityCoffeeDetailBinding
     lateinit var coffee: CoffeeItem
+
+    lateinit var mAdView : AdView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,13 +61,20 @@ class CoffeeDetailActivity : AppCompatActivity() {
 
 
         if(coffee.com_image1 != "") Glide.with(this).load(coffee.com_image1).into(binding.ivDescription2)
+        else binding.ivDescription2.visibility = View.GONE
         if(coffee.com_image2 != "") Glide.with(this).load(coffee.com_image2).into(binding.ivDescription3)
+        else binding.ivDescription3.visibility = View.GONE
         if(coffee.com_image3 != "") Glide.with(this).load(coffee.com_image3).into(binding.ivDescription4)
-        if(coffee.com_image3 == "")binding.tvDescription4.visibility = View.GONE
+        else binding.ivDescription4.visibility = View.GONE
 
 
 
 
+
+
+
+
+        setAdView()
         setBrandTexts()
         setCoffeeRange()
 
@@ -116,6 +130,18 @@ class CoffeeDetailActivity : AppCompatActivity() {
         binding.tvDescription5Title.text = coffee.description5_title
 
     }
+
+    private fun setAdView(){
+
+        MobileAds.initialize(this) {}
+
+        mAdView = findViewById(R.id.adView)
+        val adRequest = AdRequest.Builder().build()
+
+        mAdView.loadAd(adRequest)
+    }
+
+
 }
 
 

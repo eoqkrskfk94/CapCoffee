@@ -24,4 +24,11 @@
     <string name="espresso_lungo">espresso lungo</string>
     <string name="naver_view">네이버 VIEW</string>
     <string name="naver_price">최저가 보러가기</string>
+
+
+
+        <string name="admob_app_id">ca-app-pub-7146529595925475~9382673026</string>
+        <string name="banner_ad_unit_id">ca-app-pub-7146529595925475/6825734395</string>
+        <string name="banner_ad_unit_id_for_test">ca-app-pub-3940256099942544/6300978111</string>
+
 </resources>
