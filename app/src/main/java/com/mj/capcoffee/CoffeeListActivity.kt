@@ -7,6 +7,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.gms.ads.AdRequest
 import com.mj.capcoffee.databinding.ActivityCoffeeListBinding
 import com.mj.capcoffee.viewModel.CoffeeListViewModel
 import kotlinx.android.synthetic.main.activity_coffee_list.*
@@ -47,6 +48,11 @@ class CoffeeListActivity : AppCompatActivity() {
             recycler_view.layoutManager = LinearLayoutManager(this)
             recycler_view.setHasFixedSize(true)
         })
+
+
+        val adRequest = AdRequest.Builder().build()
+        binding.adView.loadAd(adRequest)
+
 
 
     }

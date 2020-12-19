@@ -17,9 +17,7 @@ class MainActivity : AppCompatActivity() {
 
 
         MobileAds.initialize(this) {}
-
         val adRequest = AdRequest.Builder().build()
-
         binding.adView.loadAd(adRequest)
 
 
