@@ -20,10 +20,8 @@
 
         <com.google.android.gms.ads.AdView
             android:id="@+id/adView"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
             ads:adSize="BANNER"
             ads:adUnitId="ca-app-pub-7146529595925475/6825734395"
             ads:layout_constraintBottom_toBottomOf="parent"
@@ -32,7 +30,8 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -43,7 +42,7 @@
                     android:id="@+id/nespressoBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="15dp"
                     android:background="@android:color/transparent"
                     android:onClick="@{()->viewModel.brandBtnClick(@string/nespresso, nespressoBtn)}"
                     app:srcCompat="@drawable/nespresso" />
@@ -106,7 +105,6 @@
                     android:onClick="@{()->viewModel.brandBtnClick(@string/dunkin, dunkinBtn)}"
                     app:srcCompat="@drawable/dunkin" />
 
-
                 <ImageView
                     android:id="@+id/line4"
                     android:layout_width="wrap_content"
@@ -114,37 +112,59 @@
                     android:layout_below="@id/dunkinBtn"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="25dp"
-                    android:layout_marginBottom="25dp"
-                    app:srcCompat="@drawable/line" />
-
-                <ImageButton
-                    android:id="@+id/paulbassettBtn"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/line4"
-                    android:background="@android:color/transparent"
-                    android:onClick="@{()->viewModel.brandBtnClick(@string/paulBassett, paulbassettBtn)}"
-                    app:srcCompat="@drawable/paulbessett" />
-
-                <ImageView
-                    android:id="@+id/line5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/paulbassettBtn"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="25dp"
-                    android:layout_marginBottom="25dp"
+                    android:layout_marginBottom="30dp"
                     app:srcCompat="@drawable/line" />
 
                 <ImageButton
                     android:id="@+id/twosomeBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/line5"
-                    android:layout_marginBottom="30dp"
+                    android:layout_below="@id/line4"
                     android:background="@android:color/transparent"
                     android:onClick="@{()->viewModel.brandBtnClick(@string/twosome, twosomeBtn)}"
                     app:srcCompat="@drawable/twosome" />
+
+
+                <ImageView
+                    android:id="@+id/line5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/twosomeBtn"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="15dp"
+                    app:srcCompat="@drawable/line" />
+
+                <ImageButton
+                    android:id="@+id/paulbassettBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line5"
+                    android:background="@android:color/transparent"
+                    android:onClick="@{()->viewModel.brandBtnClick(@string/paulBassett, paulbassettBtn)}"
+                    app:srcCompat="@drawable/paulbessett" />
+
+                <ImageView
+                    android:id="@+id/line6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/paulbassettBtn"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="25dp"
+                    app:srcCompat="@drawable/line" />
+
+                <ImageButton
+                    android:id="@+id/belmioBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line6"
+                    android:background="@android:color/transparent"
+                    android:layout_marginBottom="30dp"
+                    android:onClick="@{()->viewModel.brandBtnClick(@string/belmio, belmioBtn)}"
+                    app:srcCompat="@drawable/belmio" />
+
+
 
             </RelativeLayout>
         </ScrollView>

@@ -26,8 +26,6 @@
         tools:context=".CoffeeDetailActivity">
 
 
-
-
         <LinearLayout
             android:id="@+id/top_menubar"
             android:layout_width="match_parent"
@@ -63,6 +61,7 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginBottom="50dp"
             android:layout_below="@id/top_menubar">
 
             <LinearLayout
