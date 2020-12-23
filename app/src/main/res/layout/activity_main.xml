@@ -159,11 +159,30 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/line6"
+                    android:layout_marginBottom="20dp"
                     android:background="@android:color/transparent"
-                    android:layout_marginBottom="30dp"
                     android:onClick="@{()->viewModel.brandBtnClick(@string/belmio, belmioBtn)}"
                     app:srcCompat="@drawable/belmio" />
 
+                <ImageView
+                    android:id="@+id/line7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/belmioBtn"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="25dp"
+                    app:srcCompat="@drawable/line" />
+
+                <ImageButton
+                    android:id="@+id/lavazzaBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line7"
+                    android:layout_marginBottom="30dp"
+                    android:background="@android:color/transparent"
+                    android:onClick="@{()->viewModel.brandBtnClick(@string/lavazza, lavazzaBtn)}"
+                    app:srcCompat="@drawable/lavazza" />
 
 
             </RelativeLayout>

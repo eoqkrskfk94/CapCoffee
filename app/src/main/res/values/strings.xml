@@ -12,6 +12,8 @@
     <string name="paulBassett">paul_bassett</string>
     <string name="twosome">twosome</string>
     <string name="belmio">belmio</string>
+    <string name="lavazza">lavazza</string>
+
 
     <string name="nespresso_kr">네스프레소</string>
     <string name="starbucks_kr">스타벅스</string>
@@ -20,6 +22,7 @@
     <string name="paulBassett_kr">폴바셋</string>
     <string name="twosome_kr">투썸</string>
     <string name="belmio_kr">벨미오</string>
+    <string name="lavazza_kr">라바짜</string>
 
     <string name="barista">barista</string>
     <string name="iltaliano">dunkin</string>
