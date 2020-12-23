@@ -13,7 +13,7 @@ class CoffeeListViewModel: ViewModel() {
 
     private lateinit var brand: String
     private val coffeeList = ArrayList<CoffeeItem>()
-    val db: FirebaseFirestore = FirebaseFirestore.getInstance()
+    private val db: FirebaseFirestore = FirebaseFirestore.getInstance()
 
     fun setBrand(brand : String){
         this.brand = brand
@@ -31,7 +31,6 @@ class CoffeeListViewModel: ViewModel() {
             .get()
                 .addOnSuccessListener { result ->
                     for (document in result) {
-                        println(document["capsule_name"])
                         var coffee : CoffeeItem = document.toObject(CoffeeItem::class.java)
                         coffeeList.add(coffee)
                         coffeeCapsules.postValue(coffeeList)

@@ -46,9 +46,15 @@ class CoffeeAdapter(val context: Context, val coffeelist: List<CoffeeItem>, val 
             nameView.text = coffeeitem.capsule_name
             sideName.text = coffeeitem.side_name
 
-            if(coffeeitem.ristretto == 0) ristretto.setImageAlpha(50)
-            if(coffeeitem.espresso == 0) espresso.setImageAlpha(50)
-            if(coffeeitem.lungo == 0) lungo.setImageAlpha(50)
+            if(coffeeitem.ristretto == 0)ristretto.imageAlpha = 50
+            else ristretto.imageAlpha = 255
+
+            if(coffeeitem.espresso == 0) espresso.imageAlpha = 50
+            else espresso.imageAlpha = 255
+
+            if(coffeeitem.lungo == 0) lungo.imageAlpha = 50
+            else lungo.imageAlpha = 255
+
 
 
             itemView.setOnClickListener { itemClick(coffeeitem) }

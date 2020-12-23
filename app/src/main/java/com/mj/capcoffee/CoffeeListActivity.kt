@@ -31,7 +31,7 @@ class CoffeeListActivity : AppCompatActivity() {
         viewModel.setBrand(brand)
 
         viewModel.getCoffeeList().observe(this, Observer {
-            it -> println(it.size)
+            it ->
 
             binding.recyclerView.adapter =
                 CoffeeAdapter(this, it) { coffeeItem ->
