@@ -13,6 +13,7 @@
     <string name="twosome">twosome</string>
     <string name="belmio">belmio</string>
     <string name="lavazza">lavazza</string>
+    <string name="borbone">borbone</string>
 
 
     <string name="nespresso_kr">네스프레소</string>
@@ -23,6 +24,7 @@
     <string name="twosome_kr">투썸</string>
     <string name="belmio_kr">벨미오</string>
     <string name="lavazza_kr">라바짜</string>
+    <string name="borbone_kr">보르보네</string>
 
     <string name="barista">barista</string>
     <string name="iltaliano">dunkin</string>

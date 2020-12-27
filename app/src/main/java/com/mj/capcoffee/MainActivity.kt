@@ -23,7 +23,6 @@ class MainActivity : AppCompatActivity() {
         firebaseAnalytics = Firebase.analytics
 
 
-
         MobileAds.initialize(this) {}
         val adRequest = AdRequest.Builder().build()
         binding.adView.loadAd(adRequest)

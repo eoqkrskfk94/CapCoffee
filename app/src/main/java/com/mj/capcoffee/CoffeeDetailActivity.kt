@@ -69,11 +69,6 @@ class CoffeeDetailActivity : AppCompatActivity() {
 
 
 
-
-
-
-
-
         setAdView()
         setBrandTexts()
         setCoffeeRange()

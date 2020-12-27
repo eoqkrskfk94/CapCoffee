@@ -23,6 +23,7 @@ class CoffeeDetailViewModel {
         else if(brandName == (view.context as Activity).getString(R.string.twosome)) brandName = (view.context as Activity).getString(R.string.twosome_kr)
         else if(brandName == (view.context as Activity).getString(R.string.belmio)) brandName = (view.context as Activity).getString(R.string.belmio_kr)
         else if(brandName == (view.context as Activity).getString(R.string.lavazza)) brandName = (view.context as Activity).getString(R.string.lavazza_kr)
+        else if(brandName == (view.context as Activity).getString(R.string.borbone)) brandName = (view.context as Activity).getString(R.string.borbone_kr)
 
         coffeeName = "$brandName $coffeeName 캡슐"
         coffeeName = coffeeName.replace("\\s".toRegex(), "+")
@@ -52,6 +53,7 @@ class CoffeeDetailViewModel {
         else if(brandName == (view.context as Activity).getString(R.string.twosome)) brandName = (view.context as Activity).getString(R.string.twosome_kr)
         else if(brandName == (view.context as Activity).getString(R.string.belmio)) brandName = (view.context as Activity).getString(R.string.belmio_kr)
         else if(brandName == (view.context as Activity).getString(R.string.lavazza)) brandName = (view.context as Activity).getString(R.string.lavazza_kr)
+        else if(brandName == (view.context as Activity).getString(R.string.borbone)) brandName = (view.context as Activity).getString(R.string.borbone_kr)
 
 
 

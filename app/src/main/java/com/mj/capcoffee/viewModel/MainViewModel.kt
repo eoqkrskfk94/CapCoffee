@@ -45,6 +45,10 @@ class MainViewModel {
                 intent = Intent(view.context, CoffeeListActivity::class.java)
                 intent.putExtra("brand", view.context.getString(R.string.lavazza))
             }
+            view.context.getString(R.string.borbone) -> {
+                intent = Intent(view.context, CoffeeListActivity::class.java)
+                intent.putExtra("brand", view.context.getString(R.string.borbone))
+            }
 
         }
 

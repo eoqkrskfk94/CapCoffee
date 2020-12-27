@@ -179,10 +179,30 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/line7"
-                    android:layout_marginBottom="30dp"
+                    android:layout_marginBottom="20dp"
                     android:background="@android:color/transparent"
                     android:onClick="@{()->viewModel.brandBtnClick(@string/lavazza, lavazzaBtn)}"
                     app:srcCompat="@drawable/lavazza" />
+
+                <ImageView
+                    android:id="@+id/line8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lavazzaBtn"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="25dp"
+                    app:srcCompat="@drawable/line" />
+
+                <ImageButton
+                    android:id="@+id/borboneBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line8"
+                    android:layout_marginBottom="30dp"
+                    android:background="@android:color/transparent"
+                    android:onClick="@{()->viewModel.brandBtnClick(@string/borbone, borboneBtn)}"
+                    app:srcCompat="@drawable/borbone" />
 
 
             </RelativeLayout>
