@@ -22,8 +22,6 @@ class CoffeeListViewModel: ViewModel() {
     private val coffeeCapsules = MutableLiveData<ArrayList<CoffeeItem>>()
 
 
-
-
     fun getCoffeeList() : LiveData<ArrayList<CoffeeItem>>{
 
         if(coffeeCapsules.value == null){

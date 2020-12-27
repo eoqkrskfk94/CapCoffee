@@ -112,7 +112,7 @@
                     android:layout_below="@id/dunkinBtn"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="25dp"
-                    android:layout_marginBottom="30dp"
+                    android:layout_marginBottom="35dp"
                     app:srcCompat="@drawable/line" />
 
                 <ImageButton
@@ -131,7 +131,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/twosomeBtn"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="35dp"
                     android:layout_marginBottom="15dp"
                     app:srcCompat="@drawable/line" />
 
@@ -151,7 +151,7 @@
                     android:layout_below="@id/paulbassettBtn"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="20dp"
-                    android:layout_marginBottom="25dp"
+                    android:layout_marginBottom="35dp"
                     app:srcCompat="@drawable/line" />
 
                 <ImageButton

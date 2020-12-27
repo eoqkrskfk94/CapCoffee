@@ -5,6 +5,9 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleObserver
+import androidx.lifecycle.OnLifecycleEvent
 import com.bumptech.glide.Glide
 import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdRequest
@@ -69,7 +72,8 @@ class CoffeeDetailActivity : AppCompatActivity() {
 
 
 
-        setAdView()
+        //setAdView()
+        setKakaoAdView()
         setBrandTexts()
         setCoffeeRange()
 
@@ -126,14 +130,39 @@ class CoffeeDetailActivity : AppCompatActivity() {
 
     }
 
-    private fun setAdView(){
+//    private fun setAdView(){
+//
+//        MobileAds.initialize(this) {}
+//
+//        mAdView = findViewById(R.id.adView)
+//        val adRequest = AdRequest.Builder().build()
+//
+//        mAdView.loadAd(adRequest)
+//    }
 
-        MobileAds.initialize(this) {}
+    private fun setKakaoAdView(){
+        av_kakao.setClientId("DAN-kmIyQjxV39rrz2Vr")
 
-        mAdView = findViewById(R.id.adView)
-        val adRequest = AdRequest.Builder().build()
+        lifecycle.addObserver(object : LifecycleObserver {
 
-        mAdView.loadAd(adRequest)
+            @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
+            fun onResume() {
+                av_kakao.resume()
+            }
+
+            @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
+            fun onPause() {
+                av_kakao.pause()
+            }
+
+            @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
+            fun onDestroy() {
+                av_kakao.destroy()
+            }
+
+        })
+
+        av_kakao.loadAd()  // 광고 요청
     }
 
 

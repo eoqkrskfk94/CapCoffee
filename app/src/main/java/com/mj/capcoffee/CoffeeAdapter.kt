@@ -22,47 +22,41 @@ class CoffeeAdapter(val context: Context, val coffeelist: List<CoffeeItem>, val 
     }
 
     override fun onBindViewHolder(holder: CoffeeViewHolder, position: Int) {
-        holder?.bind(coffeelist[position], context)
+        holder?.onBindViewHolder(coffeelist[position])
     }
 
     override fun getItemCount() = coffeelist.size
 
     inner class CoffeeViewHolder(itemView: View, itemClick: (CoffeeItem) -> Unit) : RecyclerView.ViewHolder(itemView){
-        private val imageView: ImageView = itemView.image_view
-        private val intensityView: ImageView = itemView.intensity_view
-        private val nameView: TextView = itemView.item_name
-        private val ristretto: ImageView = itemView.ristrettoView
-        private val espresso: ImageView = itemView.espressoView
-        private val lungo: ImageView = itemView.lungoView
-        private val sideName: TextView = itemView.short_description
-        private val intensityLay: LinearLayout = itemView.intensityLayout
 
-        fun bind(coffeeitem: CoffeeItem, context: Context){
-            Glide.with(context).load(coffeeitem.imageResourse).into(imageView)
-            Glide.with(context).load(coffeeitem.intensityImage).into(intensityView)
-            if(coffeeitem.intensity == 0){
-                intensityLay.visibility = View.GONE
+
+        fun onBindViewHolder(item : CoffeeItem){
+            with(itemView){
+                Glide.with(context).load(item.imageResourse).into(image_view)
+                Glide.with(context).load(item.intensityImage).into(intensity_view)
+                if(item.intensity == 0){
+                    intensityLayout.visibility = View.GONE
+                }
+                item_name.text = item.capsule_name
+                short_description.text = item.side_name
+
+                if(item.ristretto == 0)ristrettoView.imageAlpha = 50
+                else ristrettoView.imageAlpha = 255
+
+                if(item.espresso == 0) espressoView.imageAlpha = 50
+                else espressoView.imageAlpha = 255
+
+                if(item.lungo == 0) lungoView.imageAlpha = 50
+                else lungoView.imageAlpha = 255
+
+
+                itemView.setOnClickListener { itemClick(item) }
             }
-            nameView.text = coffeeitem.capsule_name
-            sideName.text = coffeeitem.side_name
-
-            if(coffeeitem.ristretto == 0)ristretto.imageAlpha = 50
-            else ristretto.imageAlpha = 255
-
-            if(coffeeitem.espresso == 0) espresso.imageAlpha = 50
-            else espresso.imageAlpha = 255
-
-            if(coffeeitem.lungo == 0) lungo.imageAlpha = 50
-            else lungo.imageAlpha = 255
-
-
-
-            itemView.setOnClickListener { itemClick(coffeeitem) }
         }
 
+
+
     }
-
-
 
 
 }
