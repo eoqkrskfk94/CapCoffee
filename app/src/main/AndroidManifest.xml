@@ -18,6 +18,7 @@
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-7146529595925475~9382673026"/>
 
+
         <activity
             android:name=".CoffeeListActivity"
             android:theme="@style/MainTheme" />
