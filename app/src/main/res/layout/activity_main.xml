@@ -18,15 +18,24 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-        <com.google.android.gms.ads.AdView
-            android:id="@+id/adView"
+<!--        <com.google.android.gms.ads.AdView-->
+<!--            android:id="@+id/adView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            ads:adSize="BANNER"-->
+<!--            ads:adUnitId="ca-app-pub-7146529595925475/6825734395"-->
+<!--            ads:layout_constraintBottom_toBottomOf="parent"-->
+<!--            ads:layout_constraintEnd_toEndOf="parent"-->
+<!--            ads:layout_constraintStart_toStartOf="parent" />-->
+
+
+        <com.kakao.adfit.ads.ba.BannerAdView
+            android:id="@+id/av_kakao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            ads:adSize="BANNER"
-            ads:adUnitId="ca-app-pub-7146529595925475/6825734395"
             ads:layout_constraintBottom_toBottomOf="parent"
             ads:layout_constraintEnd_toEndOf="parent"
-            ads:layout_constraintStart_toStartOf="parent" />
+            ads:layout_constraintStart_toStartOf="parent"/>
 
         <ScrollView
             android:layout_width="match_parent"
@@ -199,10 +208,30 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/line8"
-                    android:layout_marginBottom="30dp"
+                    android:layout_marginBottom="20dp"
                     android:background="@android:color/transparent"
                     android:onClick="@{()->viewModel.brandBtnClick(@string/borbone, borboneBtn)}"
                     app:srcCompat="@drawable/borbone" />
+
+                <ImageView
+                    android:id="@+id/line9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/borboneBtn"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="25dp"
+                    app:srcCompat="@drawable/line" />
+
+                <ImageButton
+                    android:id="@+id/ediyaBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line9"
+                    android:layout_marginBottom="30dp"
+                    android:background="@android:color/transparent"
+                    android:onClick="@{()->viewModel.brandBtnClick(@string/ediya, ediyaBtn)}"
+                    app:srcCompat="@drawable/ediya" />
 
 
             </RelativeLayout>

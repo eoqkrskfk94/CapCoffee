@@ -15,8 +15,7 @@ import kotlinx.android.synthetic.main.coffee_item.view.*
 class CoffeeAdapter(val context: Context, val coffeelist: List<CoffeeItem>, val itemClick: (CoffeeItem) -> Unit) : RecyclerView.Adapter<CoffeeAdapter.CoffeeViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CoffeeViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.coffee_item,
-            parent,false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.coffee_item, parent,false)
 
         return CoffeeViewHolder(itemView, itemClick)
     }
