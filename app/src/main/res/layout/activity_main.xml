@@ -231,6 +231,26 @@
                     android:onClick="@{()->viewModel.brandBtnClick(@string/ediya, ediyaBtn)}"
                     app:srcCompat="@drawable/ediya" />
 
+                <ImageView
+                    android:id="@+id/line10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ediyaBtn"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="25dp"
+                    app:srcCompat="@drawable/line" />
+
+                <ImageButton
+                    android:id="@+id/tomsBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line10"
+                    android:layout_marginBottom="10dp"
+                    android:background="@android:color/transparent"
+                    android:onClick="@{()->viewModel.brandBtnClick(@string/tom_n_toms, tomsBtn)}"
+                    app:srcCompat="@drawable/tom_n_toms" />
+
 
             </RelativeLayout>
         </ScrollView>

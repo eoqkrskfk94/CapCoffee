@@ -15,6 +15,7 @@
     <string name="lavazza">lavazza</string>
     <string name="borbone">borbone</string>
     <string name="ediya">ediya</string>
+    <string name="tom_n_toms">tom_n_toms</string>
 
 
     <string name="nespresso_kr">네스프레소</string>
@@ -27,6 +28,7 @@
     <string name="lavazza_kr">라바짜</string>
     <string name="borbone_kr">보르보네</string>
     <string name="ediya_kr">이디야</string>
+    <string name="tom_n_toms_kr">탐앤탐스</string>
 
     <string name="barista">barista</string>
     <string name="iltaliano">dunkin</string>
