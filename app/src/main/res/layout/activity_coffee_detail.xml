@@ -61,7 +61,6 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="50dp"
             android:layout_below="@id/top_menubar">
 
             <LinearLayout
@@ -449,6 +448,13 @@
                     android:layout_marginBottom="30dp"
                     android:text="TextView"
                     android:textColor="#000000" />
+
+                <com.kakao.adfit.ads.ba.BannerAdView
+                    android:id="@+id/av_kakao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"/>
             </LinearLayout>
         </ScrollView>
 
@@ -462,12 +468,7 @@
 <!--            ads:adSize="BANNER"-->
 <!--            ads:adUnitId="ca-app-pub-7146529595925475/6825734395" />-->
 
-        <com.kakao.adfit.ads.ba.BannerAdView
-            android:id="@+id/av_kakao"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"/>
+
 
 
     </RelativeLayout>

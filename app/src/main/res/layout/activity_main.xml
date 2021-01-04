@@ -29,29 +29,27 @@
 <!--            ads:layout_constraintStart_toStartOf="parent" />-->
 
 
-        <com.kakao.adfit.ads.ba.BannerAdView
-            android:id="@+id/av_kakao"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            ads:layout_constraintBottom_toBottomOf="parent"
-            ads:layout_constraintEnd_toEndOf="parent"
-            ads:layout_constraintStart_toStartOf="parent"/>
+
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="50dp">
+            android:layout_height="match_parent">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
+                <com.kakao.adfit.ads.ba.BannerAdView
+                    android:id="@+id/av_kakao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
                 <ImageButton
                     android:id="@+id/nespressoBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="50dp"
                     android:background="@android:color/transparent"
                     android:onClick="@{()->viewModel.brandBtnClick(@string/nespresso, nespressoBtn)}"
                     app:srcCompat="@drawable/nespresso" />
@@ -228,7 +226,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/line9"
-                    android:layout_marginBottom="30dp"
+                    android:layout_marginBottom="10dp"
                     android:background="@android:color/transparent"
                     android:onClick="@{()->viewModel.brandBtnClick(@string/ediya, ediyaBtn)}"
                     app:srcCompat="@drawable/ediya" />

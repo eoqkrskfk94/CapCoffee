@@ -11,7 +11,6 @@ import com.mj.capcoffee.databinding.ActivityCoffeeListBinding
 import com.mj.capcoffee.viewModel.CoffeeListViewModel
 import kotlinx.android.synthetic.main.activity_coffee_detail.*
 import kotlinx.android.synthetic.main.activity_coffee_list.*
-import kotlinx.android.synthetic.main.activity_coffee_list.av_kakao
 
 class CoffeeListActivity : AppCompatActivity() {
 
@@ -54,33 +53,6 @@ class CoffeeListActivity : AppCompatActivity() {
 //        val adRequest = AdRequest.Builder().build()
 //        binding.adView.loadAd(adRequest)
 
-        setKakaoAdView()
-
-
     }
 
-    private fun setKakaoAdView(){
-        av_kakao.setClientId("DAN-kmIyQjxV39rrz2Vr")
-
-        lifecycle.addObserver(object : LifecycleObserver {
-
-            @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
-            fun onResume() {
-                av_kakao.resume()
-            }
-
-            @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
-            fun onPause() {
-                av_kakao.pause()
-            }
-
-            @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
-            fun onDestroy() {
-                av_kakao.destroy()
-            }
-
-        })
-
-        av_kakao.loadAd()  // 광고 요청
-    }
 }

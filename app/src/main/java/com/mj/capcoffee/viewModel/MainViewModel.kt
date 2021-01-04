@@ -49,6 +49,10 @@ class MainViewModel {
                 intent = Intent(view.context, CoffeeListActivity::class.java)
                 intent.putExtra("brand", view.context.getString(R.string.borbone))
             }
+            view.context.getString(R.string.ediya) -> {
+                intent = Intent(view.context, CoffeeListActivity::class.java)
+                intent.putExtra("brand", view.context.getString(R.string.ediya))
+            }
 
         }
 
