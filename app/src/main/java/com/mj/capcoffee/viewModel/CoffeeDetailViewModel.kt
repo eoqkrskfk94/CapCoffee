@@ -26,6 +26,7 @@ class CoffeeDetailViewModel {
         else if(brandName == (view.context as Activity).getString(R.string.borbone)) brandName = (view.context as Activity).getString(R.string.borbone_kr)
         else if(brandName == (view.context as Activity).getString(R.string.ediya)) brandName = (view.context as Activity).getString(R.string.ediya_kr)
         else if(brandName == (view.context as Activity).getString(R.string.tom_n_toms)) brandName = (view.context as Activity).getString(R.string.tom_n_toms_kr)
+        else if(brandName == (view.context as Activity).getString(R.string.coffeebean)) brandName = (view.context as Activity).getString(R.string.coffeebean_kr)
 
         coffeeName = "$brandName $coffeeName 캡슐"
         coffeeName = coffeeName.replace("\\s".toRegex(), "+")
@@ -58,6 +59,7 @@ class CoffeeDetailViewModel {
         else if(brandName == (view.context as Activity).getString(R.string.borbone)) brandName = (view.context as Activity).getString(R.string.borbone_kr)
         else if(brandName == (view.context as Activity).getString(R.string.ediya)) brandName = (view.context as Activity).getString(R.string.ediya_kr)
         else if(brandName == (view.context as Activity).getString(R.string.tom_n_toms)) brandName = (view.context as Activity).getString(R.string.tom_n_toms_kr)
+        else if(brandName == (view.context as Activity).getString(R.string.coffeebean)) brandName = (view.context as Activity).getString(R.string.coffeebean_kr)
 
 
 
