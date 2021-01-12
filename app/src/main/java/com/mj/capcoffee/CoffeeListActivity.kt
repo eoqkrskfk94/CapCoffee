@@ -18,7 +18,7 @@ class CoffeeListActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState : Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding : ActivityCoffeeListBinding = DataBindingUtil.setContentView(this, R.layout.activity_coffee_list)
+        val binding : ActivityCoffeeListBinding = DataBindingUtil.setContentView(this, R.layout.activity_coffee_list_new)
 
         var intent = intent
         brand = intent.getStringExtra("brand")
