@@ -18,49 +18,55 @@
         tools:context=".CoffeeListActivity">
 
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/cl_box"
+        <LinearLayout
+            android:id="@+id/topMenubar"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:background="@color/starbucks"
-            ads:layout_constraintEnd_toEndOf="parent"
-            ads:layout_constraintHeight_percent="0.2"
-            ads:layout_constraintStart_toStartOf="parent"
-            ads:layout_constraintTop_toTopOf="parent" />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="200dp"
-            android:layout_height="120dp"
-            ads:cardCornerRadius="15dp"
-            ads:layout_constraintBottom_toBottomOf="parent"
-            ads:layout_constraintEnd_toEndOf="parent"
-            ads:layout_constraintStart_toStartOf="parent"
-            ads:layout_constraintTop_toTopOf="parent"
-            ads:layout_constraintVertical_bias="0.1">
-
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="#00000000"
+                android:onClick="@{()->viewModel.clickBackBtn(btnBack)}"
+                app:srcCompat="?attr/actionModeCloseDrawable" />
 
             <ImageView
+                android:id="@+id/imageView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@drawable/starbucks" />
+                android:layout_weight="1"
+                app:srcCompat="@drawable/title" />
 
-
-        </androidx.cardview.widget.CardView>
+            <ImageButton
+                android:id="@+id/back_btn2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="#00000000"
+                android:visibility="invisible"
+                app:srcCompat="?attr/actionModeCloseDrawable" />
+        </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="200dp"
+            android:layout_below="@id/topMenubar"
+            android:layout_marginTop="50dp"
             android:clipToPadding="false"
             android:padding="4dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/top_menubar"
-            tools:listitem="@layout/coffee_item_small" />
+            tools:listitem="@layout/coffee_item" />
+
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

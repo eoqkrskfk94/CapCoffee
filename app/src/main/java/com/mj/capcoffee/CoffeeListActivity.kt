@@ -6,10 +6,8 @@ import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.*
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.gms.ads.AdRequest
 import com.mj.capcoffee.databinding.ActivityCoffeeListBinding
 import com.mj.capcoffee.viewModel.CoffeeListViewModel
-import kotlinx.android.synthetic.main.activity_coffee_detail.*
 import kotlinx.android.synthetic.main.activity_coffee_list.*
 
 class CoffeeListActivity : AppCompatActivity() {
@@ -18,7 +16,7 @@ class CoffeeListActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState : Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding : ActivityCoffeeListBinding = DataBindingUtil.setContentView(this, R.layout.activity_coffee_list_new)
+        val binding : ActivityCoffeeListBinding = DataBindingUtil.setContentView(this, R.layout.activity_coffee_list)
 
         var intent = intent
         brand = intent.getStringExtra("brand")

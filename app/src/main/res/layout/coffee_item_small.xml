@@ -7,9 +7,9 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_image"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="10dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="15dp"
         app:cardCornerRadius="10dp"
@@ -44,19 +44,20 @@
         android:layout_height="wrap_content"
         android:textColor="@color/light_gray"
         android:textSize="15dp"
-        app:layout_constraintBottom_toTopOf="@id/iv_intensity"
+        app:layout_constraintBottom_toTopOf="@id/styleLayout"
         app:layout_constraintStart_toStartOf="@id/tv_coffee_name"
         app:layout_constraintTop_toBottomOf="@id/tv_coffee_name"
         tools:text="부드러움 &amp; 초콜릿향" />
 
     <ImageView
         android:id="@+id/iv_intensity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.5"
+        android:layout_height="25dp"
         android:src="@drawable/nes_10"
         app:layout_constraintBottom_toBottomOf="@id/cv_image"
         app:layout_constraintStart_toStartOf="@id/tv_coffee_name"
-        app:layout_constraintTop_toBottomOf="@id/tv_coffee_description" />
+        app:layout_constraintTop_toBottomOf="@id/styleLayout" />
 
     <LinearLayout
         android:id="@+id/styleLayout"
@@ -64,8 +65,10 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="15dp"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tv_coffee_name">
+        app:layout_constraintStart_toStartOf="@id/tv_coffee_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_coffee_description"
+        app:layout_constraintBottom_toTopOf="@id/iv_intensity"
+        >
 
 
         <ImageView
