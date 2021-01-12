@@ -9,5 +9,17 @@
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
 
+    <color name="nespresso">#000000</color>
     <color name="starbucks">#007952</color>
+    <color name="illy">#FF0000</color>
+    <color name="dunkin">#F50C85</color>
+    <color name="twosome">#616165</color>
+    <color name="paulBassett">#FF0142</color>
+    <color name="belmio">#311818</color>
+    <color name="lavazza">#19325F</color>
+    <color name="borbone">#002D62</color>
+    <color name="ediya">#00276E</color>
+    <color name="tom_n_toms">#632E38</color>
+    <color name="coffeebean">#59311D</color>
+
 </resources>

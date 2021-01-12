@@ -11,58 +11,121 @@
             type="com.mj.capcoffee.viewModel.CoffeeListViewModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#FFFFFF"
-        tools:context=".CoffeeListActivity">
-
+        android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/cl_box"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:background="@color/starbucks"
-            ads:layout_constraintEnd_toEndOf="parent"
-            ads:layout_constraintHeight_percent="0.2"
-            ads:layout_constraintStart_toStartOf="parent"
-            ads:layout_constraintTop_toTopOf="parent" />
-
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="200dp"
-            android:layout_height="120dp"
-            ads:cardCornerRadius="15dp"
-            ads:layout_constraintBottom_toBottomOf="parent"
-            ads:layout_constraintEnd_toEndOf="parent"
-            ads:layout_constraintStart_toStartOf="parent"
-            ads:layout_constraintTop_toTopOf="parent"
-            ads:layout_constraintVertical_bias="0.1">
-
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:src="@drawable/starbucks" />
-
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="200dp"
-            android:clipToPadding="false"
-            android:padding="4dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/top_menubar"
-            tools:listitem="@layout/coffee_item_small" />
+            android:background="#FFFFFF"
+            tools:context=".CoffeeListActivity">
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_box"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@color/starbucks"
+                ads:layout_constraintEnd_toEndOf="parent"
+                ads:layout_constraintStart_toStartOf="parent"
+                ads:layout_constraintTop_toTopOf="parent" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:src="?attr/actionModeCloseDrawable"
+                    ads:layout_constraintStart_toStartOf="parent"
+                    android:tint="@color/white"
+                    ads:layout_constraintTop_toTopOf="parent"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_brand"
+                android:layout_width="200dp"
+                android:layout_height="120dp"
+                ads:cardCornerRadius="15dp"
+                android:layout_marginTop="60dp"
+                ads:layout_constraintEnd_toEndOf="parent"
+                ads:layout_constraintStart_toStartOf="parent"
+                ads:layout_constraintTop_toTopOf="parent">
+
+
+                <ImageView
+                    android:id="@+id/iv_brand"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/starbucks" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tv_brand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="스타벅스"
+                android:fontFamily="@font/nanum_barunpen_b"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                ads:layout_constraintStart_toStartOf="parent"
+                ads:layout_constraintTop_toBottomOf="@id/cv_brand"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/tv_brand_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="브랜드 국적: 미국"
+               android:fontFamily="@font/nanum_barunpen_r"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                ads:layout_constraintStart_toStartOf="parent"
+                ads:layout_constraintTop_toBottomOf="@id/tv_brand"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/tv_brand_description2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="설립연도: 1971년"
+                android:fontFamily="@font/nanum_barunpen_r"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                ads:layout_constraintStart_toStartOf="parent"
+                ads:layout_constraintTop_toBottomOf="@id/tv_brand_description"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="130dp"
+                android:clipToPadding="false"
+                android:padding="4dp"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                ads:layout_constraintTop_toBottomOf="@id/cl_box"
+                tools:listitem="@layout/coffee_item_small" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
 
 </layout>

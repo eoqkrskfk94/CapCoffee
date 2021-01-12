@@ -80,6 +80,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:text="커피이름"
+                    android:fontFamily="@font/nanum_barunpen_r"
                     android:textColor="#000000"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -94,6 +95,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
+                        android:fontFamily="@font/nanum_barunpen_r"
                         android:paddingBottom="10dp"
                         android:text="짧은 설명"
                         android:textSize="18sp" />
@@ -108,6 +110,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:text="TextView"
+                    android:fontFamily="@font/nanum_barunpen_r"
                     android:textAlignment="textEnd"
                     android:textSize="18sp" />
 
@@ -128,6 +131,7 @@
                         android:gravity="center"
                         android:textAlignment="textStart"
                         android:text="강도 : "
+                        android:fontFamily="@font/nanum_barunpen_r"
                         android:textColor="#000000"
                         tools:ignore="RtlCompat" />
 
@@ -184,6 +188,7 @@
                         android:onClick="@{()->viewModel.clickNaverViewBtn(coffee.capsule_name, brand ,btnNaverBlog)}"
                         android:text="@string/naver_view"
                         android:textColor="@color/white"
+                        android:fontFamily="@font/nanum_barunpen_r"
                         app:cornerRadius="15dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@id/btn_naver_price"
@@ -201,6 +206,7 @@
                         android:backgroundTint="@color/blue"
                         android:onClick="@{()->viewModel.clickNaverPriceBtn(coffee.capsule_name, brand ,btnNaverPrice)}"
                         android:text="@string/naver_price"
+                        android:fontFamily="@font/nanum_barunpen_r"
                         android:textColor="@color/white"
                         app:cornerRadius="15dp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -220,6 +226,7 @@
                     android:gravity="center"
                     android:paddingTop="30dp"
                     android:paddingBottom="30dp"
+                    android:fontFamily="@font/nanum_barunpen_r"
                     android:text="TextView"
                     android:textColor="#000000"
                     android:textSize="24sp"
@@ -246,6 +253,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="10dp"
                             android:text="로스팅"
+                            android:fontFamily="@font/nanum_barunpen_r"
                             android:textAlignment="center"
                             android:textColor="#000000"
                             android:textStyle="bold" />
@@ -269,6 +277,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="10dp"
                             android:text="쓴맛"
+                            android:fontFamily="@font/nanum_barunpen_r"
                             android:textAlignment="center"
                             android:textColor="#000000"
                             android:textStyle="bold" />
@@ -301,6 +310,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="10dp"
                             android:text="산미"
+                            android:fontFamily="@font/nanum_barunpen_r"
                             android:textAlignment="center"
                             android:textColor="#000000"
                             android:textStyle="bold" />
@@ -324,6 +334,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="10dp"
                             android:text="바디감"
+                            android:fontFamily="@font/nanum_barunpen_r"
                             android:textAlignment="center"
                             android:textColor="#000000"
                             android:textStyle="bold" />
@@ -343,6 +354,7 @@
                     android:layout_margin="10dp"
                     android:gravity="center"
                     android:paddingTop="30dp"
+                    android:fontFamily="@font/nanum_barunpen_r"
                     android:paddingBottom="30dp"
                     android:text="TextView"
                     android:textColor="#000000"
@@ -359,6 +371,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:fontFamily="@font/nanum_barunpen_r"
                     android:text="원산지"
                     android:textColor="#000000"
                     android:textSize="18sp"
@@ -372,6 +385,7 @@
                     android:layout_marginEnd="10dp"
                     android:layout_marginBottom="30dp"
                     android:text="TextView"
+                    android:fontFamily="@font/nanum_barunpen_r"
                     android:textColor="#000000"
                     android:textSize="16sp" />
 
@@ -387,6 +401,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:text="로스팅"
+                    android:fontFamily="@font/nanum_barunpen_r"
                     android:textColor="#000000"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -397,6 +412,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/nanum_barunpen_r"
                     android:layout_marginBottom="30dp"
                     android:text="TextView"
                     android:textColor="#000000"
@@ -414,6 +430,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:text="아로마 프로파일"
+                    android:fontFamily="@font/nanum_barunpen_r"
                     android:textColor="#000000"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -423,6 +440,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:fontFamily="@font/nanum_barunpen_r"
                     android:layout_marginEnd="10dp"
                     android:layout_marginBottom="30dp"
                     android:text="TextView"
@@ -434,6 +452,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:fontFamily="@font/nanum_barunpen_r"
                     android:text="성분 및 알레르기"
                     android:textColor="#000000"
                     android:textSize="18sp"
@@ -444,6 +463,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:fontFamily="@font/nanum_barunpen_r"
                     android:layout_marginEnd="10dp"
                     android:layout_marginBottom="30dp"
                     android:text="TextView"
