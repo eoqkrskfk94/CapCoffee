@@ -29,17 +29,17 @@
                 android:background="@color/starbucks"
                 ads:layout_constraintEnd_toEndOf="parent"
                 ads:layout_constraintStart_toStartOf="parent"
-                ads:layout_constraintTop_toTopOf="parent" >
+                ads:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
                     android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
                     android:src="?attr/actionModeCloseDrawable"
-                    ads:layout_constraintStart_toStartOf="parent"
                     android:tint="@color/white"
-                    ads:layout_constraintTop_toTopOf="parent"/>
+                    ads:layout_constraintStart_toStartOf="parent"
+                    ads:layout_constraintTop_toTopOf="parent" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -49,8 +49,8 @@
                 android:id="@+id/cv_brand"
                 android:layout_width="200dp"
                 android:layout_height="120dp"
-                ads:cardCornerRadius="15dp"
                 android:layout_marginTop="60dp"
+                ads:cardCornerRadius="15dp"
                 ads:layout_constraintEnd_toEndOf="parent"
                 ads:layout_constraintStart_toStartOf="parent"
                 ads:layout_constraintTop_toTopOf="parent">
@@ -58,11 +58,11 @@
 
                 <ImageView
                     android:id="@+id/iv_brand"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
                     android:src="@drawable/starbucks" />
 
 
@@ -72,40 +72,40 @@
                 android:id="@+id/tv_brand"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="스타벅스"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
                 android:fontFamily="@font/nanum_barunpen_b"
+                android:text="스타벅스"
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 ads:layout_constraintStart_toStartOf="parent"
-                ads:layout_constraintTop_toBottomOf="@id/cv_brand"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"/>
+                ads:layout_constraintTop_toBottomOf="@id/cv_brand" />
 
             <TextView
                 android:id="@+id/tv_brand_description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/nanum_barunpen_r"
                 android:text="브랜드 국적: 미국"
-               android:fontFamily="@font/nanum_barunpen_r"
                 android:textColor="@color/black"
                 android:textSize="17dp"
                 ads:layout_constraintStart_toStartOf="parent"
-                ads:layout_constraintTop_toBottomOf="@id/tv_brand"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"/>
+                ads:layout_constraintTop_toBottomOf="@id/tv_brand" />
 
             <TextView
                 android:id="@+id/tv_brand_description2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="설립연도: 1971년"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
                 android:fontFamily="@font/nanum_barunpen_r"
+                android:text="설립연도: 1971년"
                 android:textColor="@color/black"
                 android:textSize="17dp"
                 ads:layout_constraintStart_toStartOf="parent"
-                ads:layout_constraintTop_toBottomOf="@id/tv_brand_description"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"/>
+                ads:layout_constraintTop_toBottomOf="@id/tv_brand_description" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_view"
@@ -113,19 +113,29 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="130dp"
                 android:clipToPadding="false"
-                android:padding="4dp"
                 android:nestedScrollingEnabled="false"
+                android:padding="4dp"
+                android:layout_marginBottom="100dp"
+                ads:layout_constraintTop_toBottomOf="@id/cl_box"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                ads:layout_constraintTop_toBottomOf="@id/cl_box"
                 tools:listitem="@layout/coffee_item_small" />
 
 
+            <com.kakao.adfit.ads.ba.BannerAdView
+                android:id="@+id/av_kakao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                ads:layout_constraintStart_toStartOf="parent"
+                ads:layout_constraintEnd_toEndOf="parent"
+                ads:layout_constraintBottom_toBottomOf="parent"/>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </androidx.core.widget.NestedScrollView>
 
+
+    </androidx.core.widget.NestedScrollView>
 
 
 </layout>

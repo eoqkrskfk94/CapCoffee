@@ -15,7 +15,9 @@ import androidx.lifecycle.*
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mj.capcoffee.databinding.ActivityCoffeeListBinding
 import com.mj.capcoffee.viewModel.CoffeeListViewModel
+import kotlinx.android.synthetic.main.activity_coffee_detail.*
 import kotlinx.android.synthetic.main.activity_coffee_list.*
+import kotlinx.android.synthetic.main.activity_coffee_list.av_kakao
 import kotlinx.android.synthetic.main.coffee_item_small.*
 
 
@@ -29,6 +31,7 @@ class CoffeeListActivity : AppCompatActivity() {
             this,
             R.layout.activity_coffee_list
         )
+        setKakaoAdView()
 
         var intent = intent
         brand = intent.getStringExtra("brand")
@@ -193,6 +196,31 @@ class CoffeeListActivity : AppCompatActivity() {
 
         }
 
+    }
+
+    private fun setKakaoAdView(){
+        av_kakao.setClientId("DAN-kmIyQjxV39rrz2Vr")
+
+        lifecycle.addObserver(object : LifecycleObserver {
+
+            @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
+            fun onResume() {
+                av_kakao.resume()
+            }
+
+            @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
+            fun onPause() {
+                av_kakao.pause()
+            }
+
+            @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
+            fun onDestroy() {
+                av_kakao.destroy()
+            }
+
+        })
+
+        av_kakao.loadAd()  // 광고 요청
     }
 
 }
