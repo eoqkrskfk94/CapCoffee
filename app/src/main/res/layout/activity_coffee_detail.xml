@@ -72,7 +72,8 @@
                     android:id="@+id/iv_coffee_image"
                     android:layout_width="match_parent"
                     android:layout_height="300dp"
-                    app:srcCompat="@drawable/nespresso" />
+                    app:srcCompat="@drawable/nespresso"
+                    android:transitionName="transitionImage"/>
 
                 <TextView
                     android:id="@+id/tv_coffee_name"

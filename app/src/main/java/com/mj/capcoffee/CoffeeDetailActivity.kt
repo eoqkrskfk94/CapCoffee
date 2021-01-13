@@ -165,6 +165,11 @@ class CoffeeDetailActivity : AppCompatActivity() {
         av_kakao.loadAd()  // 광고 요청
     }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+        supportFinishAfterTransition()
+    }
+
 
 }
 

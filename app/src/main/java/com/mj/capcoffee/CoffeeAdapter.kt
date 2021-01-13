@@ -4,12 +4,13 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.mj.capcoffee.datas.CoffeeItem
 import kotlinx.android.synthetic.main.coffee_item_small.view.*
 
-class CoffeeAdapter(val context: Context, val coffeelist: List<CoffeeItem>, val itemClick: (CoffeeItem) -> Unit) : RecyclerView.Adapter<CoffeeAdapter.CoffeeViewHolder>() {
+class CoffeeAdapter(val context: Context, val coffeelist: List<CoffeeItem>, val itemClick: (CoffeeItem, ImageView) -> Unit) : RecyclerView.Adapter<CoffeeAdapter.CoffeeViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CoffeeViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.coffee_item_small, parent,false)
@@ -23,7 +24,7 @@ class CoffeeAdapter(val context: Context, val coffeelist: List<CoffeeItem>, val 
 
     override fun getItemCount() = coffeelist.size
 
-    inner class CoffeeViewHolder(itemView: View, itemClick: (CoffeeItem) -> Unit) : RecyclerView.ViewHolder(itemView){
+    inner class CoffeeViewHolder(itemView: View, itemClick: (CoffeeItem, ImageView) -> Unit) : RecyclerView.ViewHolder(itemView){
 
 
         fun onBindViewHolder(item : CoffeeItem){
@@ -46,7 +47,7 @@ class CoffeeAdapter(val context: Context, val coffeelist: List<CoffeeItem>, val 
                 else lungoView.imageAlpha = 255
 
 
-                itemView.setOnClickListener { itemClick(item) }
+                itemView.setOnClickListener { itemClick(item, iv_image) }
             }
         }
 

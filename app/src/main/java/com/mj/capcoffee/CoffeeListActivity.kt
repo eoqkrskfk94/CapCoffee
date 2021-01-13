@@ -1,8 +1,14 @@
 package com.mj.capcoffee
 
+import android.app.ActivityOptions
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.os.Build
 import android.os.Bundle
+import android.view.View
+import android.view.animation.AnimationUtils
+import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityOptionsCompat
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.*
@@ -10,6 +16,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.mj.capcoffee.databinding.ActivityCoffeeListBinding
 import com.mj.capcoffee.viewModel.CoffeeListViewModel
 import kotlinx.android.synthetic.main.activity_coffee_list.*
+import kotlinx.android.synthetic.main.coffee_item_small.*
+
 
 class CoffeeListActivity : AppCompatActivity() {
 
@@ -17,7 +25,10 @@ class CoffeeListActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState : Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding : ActivityCoffeeListBinding = DataBindingUtil.setContentView(this, R.layout.activity_coffee_list)
+        val binding : ActivityCoffeeListBinding = DataBindingUtil.setContentView(
+            this,
+            R.layout.activity_coffee_list
+        )
 
         var intent = intent
         brand = intent.getStringExtra("brand")
@@ -30,21 +41,36 @@ class CoffeeListActivity : AppCompatActivity() {
         viewModel.setBrand(brand)
         setBrandImage(brand)
 
-        viewModel.getCoffeeList().observe(this, Observer {
-            it ->
+        viewModel.getCoffeeList().observe(this, Observer { it ->
 
             binding.recyclerView.adapter =
-                CoffeeAdapter(this, it) { coffeeItem ->
+                CoffeeAdapter(this, it) { coffeeItem, imageView ->
                     val intent = Intent(
                         this,
                         CoffeeDetailActivity::class.java
                     )
                     intent.putExtra("brand", brand)
-
                     intent.putExtra("coffee", coffeeItem)
-                    startActivity(intent)
 
+
+                    if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
+                        val activityOptions = ActivityOptions.makeSceneTransitionAnimation(this, imageView, "transitionImage")
+                        startActivity(intent, activityOptions.toBundle())
+                    }
+
+                    else{
+                        startActivity(intent)
+                    }
                 }
+
+            recycler_view.apply {
+                layoutAnimation = AnimationUtils.loadLayoutAnimation(
+                    context,
+                    R.anim.layout_animation_fall_down
+                )
+                scheduleLayoutAnimation()
+            }
+
             recycler_view.layoutManager = LinearLayoutManager(this)
             recycler_view.setHasFixedSize(true)
         })
@@ -56,7 +82,7 @@ class CoffeeListActivity : AppCompatActivity() {
     }
 
 
-    private fun setBrandImage(brand:String){
+    private fun setBrandImage(brand : String){
 
         when(brand){
             getString(R.string.nespresso) -> {
