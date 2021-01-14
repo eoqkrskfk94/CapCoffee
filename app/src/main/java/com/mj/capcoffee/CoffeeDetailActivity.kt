@@ -1,22 +1,22 @@
 package com.mj.capcoffee
 
-import androidx.appcompat.app.AppCompatActivity
+import android.graphics.Color
+import android.os.Build
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
+import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
 import com.bumptech.glide.Glide
-import com.google.android.gms.ads.AdListener
-import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
-import com.google.android.gms.ads.MobileAds
 import com.mj.capcoffee.databinding.ActivityCoffeeDetailBinding
 import com.mj.capcoffee.datas.CoffeeItem
 import com.mj.capcoffee.viewModel.CoffeeDetailViewModel
 import kotlinx.android.synthetic.main.activity_coffee_detail.*
+
 
 class CoffeeDetailActivity : AppCompatActivity() {
 
@@ -25,12 +25,15 @@ class CoffeeDetailActivity : AppCompatActivity() {
 
     lateinit var mAdView : AdView
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+    @RequiresApi(Build.VERSION_CODES.M)
+    override fun onCreate(savedInstanceState : Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_coffee_detail)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_coffee_detail)
         binding.viewModel = CoffeeDetailViewModel()
 
+
+        //setSupportActionBar(binding.tbCoffeeDetail)
 
         var intent = intent
         coffee = intent.getParcelableExtra<CoffeeItem>("coffee")
@@ -39,10 +42,12 @@ class CoffeeDetailActivity : AppCompatActivity() {
         binding.coffee = coffee
         binding.brand = brand
 
+        setActionBarTransparent()
+
 
         Glide.with(this).load(coffee.imageResourse).into(binding.ivCoffeeImage)
         binding.tvCoffeeName.text = coffee.capsule_name
-        binding.tvShortDescription.text = coffee.side_name?.replace("\\n","\n")
+        binding.tvShortDescription.text = coffee.side_name?.replace("\\n", "\n")
         Glide.with(this).load(coffee.intensityImage).into(iv_intensity_view)
 
 
@@ -53,13 +58,13 @@ class CoffeeDetailActivity : AppCompatActivity() {
 
 
 
-        binding.tvSideTitle.text = coffee.side_title?.replace("\\n","\n")
+        binding.tvSideTitle.text = coffee.side_title?.replace("\\n", "\n")
         binding.tvCapType.text = coffee.capType
-        binding.tvDescription1.text = coffee.description1?.replace("\\n","\n")
-        binding.tvDescription2.text = coffee.description2?.replace("\\n","\n")
-        binding.tvDescription3.text = coffee.description3?.replace("\\n","\n")
-        binding.tvDescription4.text = coffee.description4?.replace("\\n","\n")
-        binding.tvDescription5.text = coffee.description5?.replace("\\n","\n")
+        binding.tvDescription1.text = coffee.description1?.replace("\\n", "\n")
+        binding.tvDescription2.text = coffee.description2?.replace("\\n", "\n")
+        binding.tvDescription3.text = coffee.description3?.replace("\\n", "\n")
+        binding.tvDescription4.text = coffee.description4?.replace("\\n", "\n")
+        binding.tvDescription5.text = coffee.description5?.replace("\\n", "\n")
 
 
 
@@ -78,7 +83,11 @@ class CoffeeDetailActivity : AppCompatActivity() {
         setCoffeeRange()
 
 
-        btn_back.setOnClickListener { finish() }
+        binding.btnBack.setOnClickListener {
+            supportFinishAfterTransition()
+        }
+
+
     }
 
     private fun setCoffeeRange(){
@@ -165,10 +174,35 @@ class CoffeeDetailActivity : AppCompatActivity() {
         av_kakao.loadAd()  // 광고 요청
     }
 
+
+    @RequiresApi(Build.VERSION_CODES.M)
+    private fun setActionBarTransparent(){
+
+        binding.svCoffeeDetail.setOnScrollChangeListener { v, scrollX, scrollY, oldScrollX, oldScrollY ->
+            //println("$scrollX $scrollY")
+
+            if(scrollY >= 0){
+                if(scrollY <= 500){
+                    binding.actionBar.setBackgroundColor(Color.rgb(255, 255, 255))
+                    binding.actionBar.background.alpha = (scrollY.toFloat()/500.0 * 255.0).toInt()
+                    println(binding.actionBar.background.alpha)
+                }
+                else{
+                    binding.actionBar.setBackgroundColor(Color.rgb(255, 255, 255))
+                    binding.actionBar.background.alpha = 255
+                }
+            }
+        }
+
+    }
+
+
     override fun onBackPressed() {
         super.onBackPressed()
         supportFinishAfterTransition()
     }
+
+
 
 
 }

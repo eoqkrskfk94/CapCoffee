@@ -76,10 +76,11 @@ class CoffeeDetailViewModel {
 
     }
 
-    fun clickBackBtn(view : View){
-        (view.context as Activity).finish()
-
-    }
+//    fun clickBackBtn(view : View){
+//        view.supportFinishAfterTransition()
+//        (view.context as Activity).finish()
+//
+//    }
 
 
 }
