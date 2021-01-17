@@ -1,4 +1,4 @@
-package com.mj.capcoffee
+package com.mj.capcoffee.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.mj.capcoffee.R
 import com.mj.capcoffee.datas.CoffeeItem
 import kotlinx.android.synthetic.main.coffee_item_small.view.*
 

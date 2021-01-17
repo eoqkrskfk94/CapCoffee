@@ -4,23 +4,19 @@ import android.app.ActivityOptions
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import android.view.View
 import android.view.Window
 import android.view.WindowManager
 import android.view.animation.AnimationUtils
-import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.ActivityOptionsCompat
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.*
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.mj.capcoffee.adapter.CoffeeAdapter
 import com.mj.capcoffee.databinding.ActivityCoffeeListBinding
 import com.mj.capcoffee.viewModel.CoffeeListViewModel
-import kotlinx.android.synthetic.main.activity_coffee_detail.*
 import kotlinx.android.synthetic.main.activity_coffee_list.*
 import kotlinx.android.synthetic.main.activity_coffee_list.av_kakao
-import kotlinx.android.synthetic.main.coffee_item_small.*
 
 
 class CoffeeListActivity : AppCompatActivity() {
@@ -33,7 +29,7 @@ class CoffeeListActivity : AppCompatActivity() {
             this,
             R.layout.activity_coffee_list
         )
-        setKakaoAdView()
+
 
         var intent = intent
         brand = intent.getStringExtra("brand")
@@ -78,6 +74,7 @@ class CoffeeListActivity : AppCompatActivity() {
 
             recycler_view.layoutManager = LinearLayoutManager(this)
             recycler_view.setHasFixedSize(true)
+            setKakaoAdView()
         })
 
 

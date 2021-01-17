@@ -1,4 +1,4 @@
-package com.mj.capcoffee
+package com.mj.capcoffee.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -9,13 +9,15 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.mj.capcoffee.R
 import com.mj.capcoffee.datas.CoffeeItem
 import kotlinx.android.synthetic.main.coffee_item.view.*
 
 class CoffeeBindAdapter(val context: Context, val coffeelist: List<CoffeeItem>, val itemClick: (CoffeeItem) -> Unit) : RecyclerView.Adapter<CoffeeBindAdapter.CoffeeViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CoffeeViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.coffee_item,
+        val itemView = LayoutInflater.from(parent.context).inflate(
+            R.layout.coffee_item,
             parent,false)
 
         return CoffeeViewHolder(itemView, itemClick)
@@ -55,8 +57,6 @@ class CoffeeBindAdapter(val context: Context, val coffeelist: List<CoffeeItem>, 
         }
 
     }
-
-
 
 
 }

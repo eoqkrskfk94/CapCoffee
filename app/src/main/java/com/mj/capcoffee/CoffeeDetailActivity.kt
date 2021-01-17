@@ -178,6 +178,9 @@ class CoffeeDetailActivity : AppCompatActivity() {
     @RequiresApi(Build.VERSION_CODES.M)
     private fun setActionBarTransparent(){
 
+        binding.actionBar.setBackgroundColor(Color.rgb(255, 255, 255))
+        binding.actionBar.background.alpha = 0
+
         binding.svCoffeeDetail.setOnScrollChangeListener { v, scrollX, scrollY, oldScrollX, oldScrollY ->
             //println("$scrollX $scrollY")
 
