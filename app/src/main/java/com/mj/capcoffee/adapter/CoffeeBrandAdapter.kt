@@ -5,12 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.mj.capcoffee.R
 import com.mj.capcoffee.datas.CoffeeBrandItem
 import kotlinx.android.synthetic.main.item_brand.view.*
 
-class CoffeeBrandAdapter(val context: Context, val brandList: List<CoffeeBrandItem>, val itemClick: (CoffeeBrandItem) -> Unit) : RecyclerView.Adapter<CoffeeBrandAdapter.CoffeeBrandViewHolder>() {
+class CoffeeBrandAdapter(val context: Context, val brandList: List<CoffeeBrandItem>, val itemClick: (CoffeeBrandItem, CardView, ImageView) -> Unit) : RecyclerView.Adapter<CoffeeBrandAdapter.CoffeeBrandViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CoffeeBrandViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(
@@ -26,15 +27,17 @@ class CoffeeBrandAdapter(val context: Context, val brandList: List<CoffeeBrandIt
 
     override fun getItemCount() = brandList.size
 
-    inner class CoffeeBrandViewHolder(itemView: View, itemClick: (CoffeeBrandItem) -> Unit) : RecyclerView.ViewHolder(itemView){
+    inner class CoffeeBrandViewHolder(itemView: View, itemClick: (CoffeeBrandItem, CardView, ImageView) -> Unit) : RecyclerView.ViewHolder(itemView){
         private val imageView: ImageView = itemView.iv_brand
+        private val cardView: CardView = itemView.cv_brand
 
 
         fun bind(brandItem: CoffeeBrandItem, context: Context){
 
             imageView.setImageResource(brandItem.imageResourse)
 
-            itemView.setOnClickListener { itemClick(brandItem) }
+
+            itemView.setOnClickListener { itemClick(brandItem, cardView, imageView) }
         }
 
     }

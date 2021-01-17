@@ -7,9 +7,11 @@
     tools:layout_width="200dp">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cv_brand"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="15dp"
+        android:transitionName="transitionImageBrand"
         app:cardCornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,9 +23,10 @@
             android:layout_height="match_parent"
             android:layout_marginStart="10dp"
             android:layout_marginTop="25dp"
-            android:layout_marginBottom="25dp"
             android:layout_marginEnd="10dp"
-            android:src="@drawable/dunkin" />
+            android:layout_marginBottom="25dp"
+            android:src="@drawable/dunkin"
+            android:transitionName="transitionImageBrand2" />
 
 
     </androidx.cardview.widget.CardView>

@@ -17,4 +17,9 @@ class NespressoTypeActivity : AppCompatActivity() {
 
 
     }
+
+    override fun finish() {
+        super.finish()
+        overridePendingTransition(R.anim.fadein, R.anim.fadeout)
+    }
 }

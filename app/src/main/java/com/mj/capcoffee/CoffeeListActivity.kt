@@ -243,4 +243,11 @@ class CoffeeListActivity : AppCompatActivity() {
         av_kakao.loadAd()  // 광고 요청
     }
 
+
+
+    override fun finish() {
+        super.finish()
+        overridePendingTransition(R.anim.fadein, R.anim.fadeout)
+    }
+
 }

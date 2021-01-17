@@ -32,12 +32,13 @@
                 ads:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
+                    android:id="@+id/iv_back_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
+                    android:padding="15dp"
                     android:src="?attr/actionModeCloseDrawable"
                     android:tint="@color/white"
+                    android:onClick="@{() -> viewModel.clickBackBtn(ivBackButton)}"
                     ads:layout_constraintStart_toStartOf="parent"
                     ads:layout_constraintTop_toTopOf="parent" />
 
@@ -50,6 +51,7 @@
                 android:layout_width="200dp"
                 android:layout_height="120dp"
                 android:layout_marginTop="60dp"
+                android:transitionName="transitionImageBrand"
                 ads:cardCornerRadius="15dp"
                 ads:layout_constraintEnd_toEndOf="parent"
                 ads:layout_constraintStart_toStartOf="parent"
@@ -61,8 +63,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="5dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:transitionName="transitionImageBrand2"
                     android:src="@drawable/starbucks" />
 
 

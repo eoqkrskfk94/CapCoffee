@@ -4,7 +4,7 @@
     <item android:drawable="@android:color/background_light" />
 
     <item>
-        <bitmap android:src="@drawable/logo"
+        <bitmap android:src="@drawable/new_splash"
             android:gravity="center"/>
     </item>
 

@@ -2,25 +2,23 @@ package com.mj.capcoffee
 
 import android.app.ActivityOptions
 import android.content.Intent
+import android.util.Pair as UtilPair
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.view.animation.AnimationUtils
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.analytics.ktx.analytics
 import com.google.firebase.ktx.Firebase
-import com.mj.capcoffee.adapter.CoffeeAdapter
 import com.mj.capcoffee.adapter.CoffeeBrandAdapter
 import com.mj.capcoffee.databinding.ActivityMain2Binding
 import com.mj.capcoffee.datas.CoffeeBrandItem
-import com.mj.capcoffee.viewModel.CoffeeListViewModel
 import com.mj.capcoffee.viewModel.MainViewModel
 import kotlinx.android.synthetic.main.activity_coffee_detail.*
 import kotlinx.android.synthetic.main.activity_coffee_detail.av_kakao
@@ -59,7 +57,7 @@ class MainActivity2 : AppCompatActivity() {
 
 
 
-        binding.rvCoffeeBrand.adapter = CoffeeBrandAdapter(this, brands) { brandItem ->
+        binding.rvCoffeeBrand.adapter = CoffeeBrandAdapter(this, brands) { brandItem, cardView, imageView ->
             println(brandItem.brandName)
 
             if(brandItem.brandName == "nespresso") intent = Intent(this, NespressoTypeActivity::class.java)
@@ -67,7 +65,10 @@ class MainActivity2 : AppCompatActivity() {
                 intent = Intent(this, CoffeeListActivity::class.java)
                 intent.putExtra("brand", brandItem.brandName)
             }
+
             startActivity(intent)
+            overridePendingTransition(R.anim.fadein, R.anim.fadeout)
+
         }
 
         binding.rvCoffeeBrand.apply {
@@ -110,4 +111,6 @@ class MainActivity2 : AppCompatActivity() {
 
         av_kakao.loadAd()  // 광고 요청
     }
+
+
 }
