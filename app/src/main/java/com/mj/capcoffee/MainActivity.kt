@@ -1,50 +1,67 @@
 package com.mj.capcoffee
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
-import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.MobileAds
-import com.google.android.gms.ads.RequestConfiguration
-import com.google.firebase.analytics.FirebaseAnalytics
-import com.google.firebase.analytics.ktx.analytics
-import com.google.firebase.ktx.Firebase
 import com.mj.capcoffee.databinding.ActivityMainBinding
-import com.mj.capcoffee.viewModel.MainViewModel
 import kotlinx.android.synthetic.main.activity_coffee_detail.*
-import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var firebaseAnalytics: FirebaseAnalytics
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState : Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding: ActivityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        binding.viewModel = MainViewModel()
+        setContentView(R.layout.activity_main)
 
-        firebaseAnalytics = Firebase.analytics
+        val binding: ActivityMainBinding = DataBindingUtil.setContentView(
+            this,
+            R.layout.activity_main
+        )
+        binding.lifecycleOwner = this
 
-
-//        val testDeviceIds = Arrays.asList("3E8875544BD4208F7F910D68F0522601")
-//        val configuration = RequestConfiguration.Builder().setTestDeviceIds(testDeviceIds).build()
-//        MobileAds.setRequestConfiguration(configuration)
-//
-//
-//        MobileAds.initialize(this) {}
-//        val adRequest = AdRequest.Builder().build()
-//
-//        binding.adView.loadAd(adRequest)
-
+        setBottomNavigation(binding)
         setKakaoAdView()
-
-
-
-
     }
+
+    /**
+     * bottom navigation 세팅
+     */
+    private fun setBottomNavigation(binding : ActivityMainBinding){
+
+        val fragment = NespressoCapsuleFragment()
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.frame_layout, fragment)
+            .commit()
+
+
+        binding.bnMenu.setOnNavigationItemSelectedListener { item ->
+            when(item.itemId){
+                R.id.page_1 -> {
+                    val fragment = NespressoCapsuleFragment()
+                    supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.frame_layout, fragment)
+                        .commit()
+                    true
+                }
+                R.id.page_2 -> {
+                    val fragment = DolceCapsuleFragment()
+                    supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.frame_layout, fragment)
+                        .commit()
+                    true
+                }
+
+                else -> false
+            }
+        }
+    }
+
 
     private fun setKakaoAdView(){
         av_kakao.setClientId("DAN-kmIyQjxV39rrz2Vr")

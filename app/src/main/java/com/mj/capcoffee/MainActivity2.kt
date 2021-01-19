@@ -1,12 +1,8 @@
 package com.mj.capcoffee
 
-import android.app.ActivityOptions
 import android.content.Intent
-import android.util.Pair as UtilPair
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.view.animation.AnimationUtils
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Lifecycle
@@ -20,9 +16,7 @@ import com.mj.capcoffee.adapter.CoffeeBrandAdapter
 import com.mj.capcoffee.databinding.ActivityMain2Binding
 import com.mj.capcoffee.datas.CoffeeBrandItem
 import com.mj.capcoffee.viewModel.MainViewModel
-import kotlinx.android.synthetic.main.activity_coffee_detail.*
 import kotlinx.android.synthetic.main.activity_coffee_detail.av_kakao
-import kotlinx.android.synthetic.main.activity_coffee_list.*
 
 class MainActivity2 : AppCompatActivity() {
 
@@ -53,7 +47,6 @@ class MainActivity2 : AppCompatActivity() {
         brands.add(CoffeeBrandItem(R.drawable.borbone, getString(R.string.borbone), "", ""))
         brands.add(CoffeeBrandItem(R.drawable.tom_n_toms, getString(R.string.tom_n_toms), "", ""))
         brands.add(CoffeeBrandItem(R.drawable.coffeebean, getString(R.string.coffeebean), "", ""))
-        println(brands.size)
 
 
 
