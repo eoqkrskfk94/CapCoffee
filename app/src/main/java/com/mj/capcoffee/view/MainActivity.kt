@@ -1,4 +1,4 @@
-package com.mj.capcoffee
+package com.mj.capcoffee.view
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -6,6 +6,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
+import com.mj.capcoffee.R
 import com.mj.capcoffee.databinding.ActivityMainBinding
 import kotlinx.android.synthetic.main.activity_coffee_detail.*
 

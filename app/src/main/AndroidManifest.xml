@@ -13,16 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".view.MainActivity"
             android:theme="@style/MainTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity2"
+            android:name=".view.MainActivity2"
             android:theme="@style/MainTheme"></activity>
 
         <meta-data
@@ -30,16 +25,16 @@
             android:value="ca-app-pub-7146529595925475~9382673026" />
 
         <activity
-            android:name=".CoffeeListActivity"
+            android:name=".view.CoffeeListActivity"
             android:theme="@style/MainTheme" />
         <activity
-            android:name=".NespressoTypeActivity"
+            android:name=".view.NespressoTypeActivity"
             android:theme="@style/MainTheme" />
         <activity
-            android:name=".CoffeeDetailActivity"
+            android:name=".view.CoffeeDetailActivity"
             android:theme="@style/MainTheme" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".view.SplashActivity"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

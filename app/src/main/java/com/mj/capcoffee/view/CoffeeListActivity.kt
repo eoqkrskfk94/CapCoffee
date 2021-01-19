@@ -1,4 +1,4 @@
-package com.mj.capcoffee
+package com.mj.capcoffee.view
 
 import android.app.ActivityOptions
 import android.content.Intent
@@ -12,6 +12,7 @@ import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.*
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.mj.capcoffee.R
 import com.mj.capcoffee.adapter.CoffeeAdapter
 import com.mj.capcoffee.databinding.ActivityCoffeeListBinding
 import com.mj.capcoffee.viewModel.CoffeeListViewModel
@@ -33,6 +34,8 @@ class CoffeeListActivity : AppCompatActivity() {
 
         var intent = intent
         brand = intent.getStringExtra("brand")
+
+        println(brand)
 
         val viewModel = ViewModelProvider(this)[CoffeeListViewModel::class.java]
         binding.viewModel = viewModel
@@ -212,6 +215,36 @@ class CoffeeListActivity : AppCompatActivity() {
                 tv_brand.text = getString(R.string.coffeebean_kr)
                 tv_brand_description.text = "브랜드 국적: 미국"
                 tv_brand_description2.text = "설립연도: 1963년"
+            }
+
+
+
+            //돌체구스토 캡슐
+            getString(R.string.dolce_gusto_dolce) -> {
+                iv_brand.setImageResource(R.drawable.dolce_gusto)
+                window.statusBarColor = ContextCompat.getColor(this, R.color.dolce_gusto)
+                cl_box.setBackgroundColor(ContextCompat.getColor(this, R.color.dolce_gusto))
+                tv_brand.text = getString(R.string.dolce_gusto_dolce_kr)
+                tv_brand_description.text = "브랜드 국적: 스위스"
+                tv_brand_description2.text = "설립연도: 2006년"
+            }
+
+            getString(R.string.starbucks_dolce) -> {
+                iv_brand.setImageResource(R.drawable.starbucks)
+                window.statusBarColor = ContextCompat.getColor(this, R.color.starbucks)
+                cl_box.setBackgroundColor(ContextCompat.getColor(this, R.color.starbucks))
+                tv_brand.text = getString(R.string.starbucks_kr)
+                tv_brand_description.text = "브랜드 국적: 미국"
+                tv_brand_description2.text = "설립연도: 1963년"
+            }
+
+            getString(R.string.hisbeans_dolce) -> {
+                iv_brand.setImageResource(R.drawable.hisbeans)
+                window.statusBarColor = ContextCompat.getColor(this, R.color.hisbeans)
+                cl_box.setBackgroundColor(ContextCompat.getColor(this, R.color.hisbeans))
+                tv_brand.text = getString(R.string.hisbeans_dolce_kr)
+                tv_brand_description.text = "브랜드 국적: 대한민국"
+                tv_brand_description2.text = "설립연도: 2008년"
             }
 
         }

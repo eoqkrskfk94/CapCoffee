@@ -18,6 +18,10 @@
     <string name="tom_n_toms">tom_n_toms</string>
     <string name="coffeebean">coffeebean</string>
 
+    <string name="dolce_gusto_dolce">dolce_gusto_dolce</string>
+    <string name="starbucks_dolce">starbucks_dolce</string>
+    <string name="hisbeans_dolce">hisbeans_dolce</string>
+
 
     <string name="nespresso_kr">네스프레소</string>
     <string name="starbucks_kr">스타벅스</string>
@@ -31,6 +35,10 @@
     <string name="ediya_kr">이디야</string>
     <string name="tom_n_toms_kr">탐앤탐스</string>
     <string name="coffeebean_kr">커피빈</string>
+
+    <string name="dolce_gusto_dolce_kr">돌체구스토</string>
+    <string name="starbucks_dolce_kr">스타벅스 돌체구스토</string>
+    <string name="hisbeans_dolce_kr">히즈빈스 돌체구스토</string>
 
     <string name="barista">barista</string>
     <string name="iltaliano">dunkin</string>

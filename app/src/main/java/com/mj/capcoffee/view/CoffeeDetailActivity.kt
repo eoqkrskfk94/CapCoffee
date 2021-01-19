@@ -1,4 +1,4 @@
-package com.mj.capcoffee
+package com.mj.capcoffee.view
 
 import android.graphics.Color
 import android.os.Build
@@ -12,10 +12,12 @@ import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
 import com.bumptech.glide.Glide
 import com.google.android.gms.ads.AdView
+import com.mj.capcoffee.R
 import com.mj.capcoffee.databinding.ActivityCoffeeDetailBinding
 import com.mj.capcoffee.datas.CoffeeItem
 import com.mj.capcoffee.viewModel.CoffeeDetailViewModel
 import kotlinx.android.synthetic.main.activity_coffee_detail.*
+import kotlinx.android.synthetic.main.coffee_item_small.view.*
 
 
 class CoffeeDetailActivity : AppCompatActivity() {
@@ -52,9 +54,21 @@ class CoffeeDetailActivity : AppCompatActivity() {
 
 
         if (coffee.intensity == 0) binding.llIntensityView.visibility = View.GONE
-        if (coffee.ristretto == 0) binding.ivRistretto.imageAlpha = 50
-        if (coffee.espresso == 0) binding.ivEspresso.imageAlpha = 50
-        if (coffee.lungo == 0) binding.ivLungo.imageAlpha = 50
+
+        if(coffee.ristretto == 0 && coffee.espresso == 0 && coffee.lungo == 0){
+            binding.ivRistretto.visibility = View.GONE
+            binding.ivEspresso.visibility = View.GONE
+            binding.ivLungo.visibility = View.GONE
+        }
+
+        else{
+            if (coffee.ristretto == 0) binding.ivRistretto.imageAlpha = 50
+            if (coffee.espresso == 0) binding.ivEspresso.imageAlpha = 50
+            if (coffee.lungo == 0) binding.ivLungo.imageAlpha = 50
+        }
+
+
+
 
 
 

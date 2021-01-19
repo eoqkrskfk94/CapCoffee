@@ -28,6 +28,10 @@ class CoffeeDetailViewModel {
         else if(brandName == (view.context as Activity).getString(R.string.tom_n_toms)) brandName = (view.context as Activity).getString(R.string.tom_n_toms_kr)
         else if(brandName == (view.context as Activity).getString(R.string.coffeebean)) brandName = (view.context as Activity).getString(R.string.coffeebean_kr)
 
+        else if(brandName == (view.context as Activity).getString(R.string.dolce_gusto_dolce)) brandName = (view.context as Activity).getString(R.string.dolce_gusto_dolce_kr)
+        else if(brandName == (view.context as Activity).getString(R.string.starbucks_dolce)) brandName = (view.context as Activity).getString(R.string.starbucks_dolce_kr)
+        else if(brandName == (view.context as Activity).getString(R.string.hisbeans_dolce)) brandName = (view.context as Activity).getString(R.string.hisbeans_dolce_kr)
+
         coffeeName = "$brandName $coffeeName 캡슐"
         coffeeName = coffeeName.replace("\\s".toRegex(), "+")
 
@@ -60,6 +64,10 @@ class CoffeeDetailViewModel {
         else if(brandName == (view.context as Activity).getString(R.string.ediya)) brandName = (view.context as Activity).getString(R.string.ediya_kr)
         else if(brandName == (view.context as Activity).getString(R.string.tom_n_toms)) brandName = (view.context as Activity).getString(R.string.tom_n_toms_kr)
         else if(brandName == (view.context as Activity).getString(R.string.coffeebean)) brandName = (view.context as Activity).getString(R.string.coffeebean_kr)
+
+        else if(brandName == (view.context as Activity).getString(R.string.dolce_gusto_dolce)) brandName = (view.context as Activity).getString(R.string.dolce_gusto_dolce_kr)
+        else if(brandName == (view.context as Activity).getString(R.string.starbucks_dolce)) brandName = (view.context as Activity).getString(R.string.starbucks_dolce_kr)
+        else if(brandName == (view.context as Activity).getString(R.string.hisbeans_dolce)) brandName = (view.context as Activity).getString(R.string.hisbeans_dolce_kr)
 
 
 

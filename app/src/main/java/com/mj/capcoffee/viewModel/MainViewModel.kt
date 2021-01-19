@@ -2,8 +2,8 @@ package com.mj.capcoffee.viewModel
 
 import android.content.Intent
 import android.view.View
-import com.mj.capcoffee.CoffeeListActivity
-import com.mj.capcoffee.NespressoTypeActivity
+import com.mj.capcoffee.view.CoffeeListActivity
+import com.mj.capcoffee.view.NespressoTypeActivity
 import com.mj.capcoffee.R
 
 class MainViewModel {

@@ -1,4 +1,4 @@
-package com.mj.capcoffee
+package com.mj.capcoffee.view
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,10 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
-import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.LifecycleObserver
-import androidx.lifecycle.OnLifecycleEvent
 import androidx.recyclerview.widget.GridLayoutManager
+import com.mj.capcoffee.R
 import com.mj.capcoffee.adapter.CoffeeBrandAdapter
 import com.mj.capcoffee.databinding.FragmentNespressoCapsuleBinding
 import com.mj.capcoffee.datas.CoffeeBrandItem

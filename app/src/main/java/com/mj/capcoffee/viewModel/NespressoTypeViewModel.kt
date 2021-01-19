@@ -3,7 +3,7 @@ package com.mj.capcoffee.viewModel
 import android.app.Activity
 import android.content.Intent
 import android.view.View
-import com.mj.capcoffee.CoffeeListActivity
+import com.mj.capcoffee.view.CoffeeListActivity
 import com.mj.capcoffee.R
 
 class NespressoTypeViewModel {

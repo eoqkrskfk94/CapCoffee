@@ -38,14 +38,21 @@ class CoffeeAdapter(val context: Context, val coffeelist: List<CoffeeItem>, val 
                 tv_coffee_name.text = item.capsule_name
                 tv_coffee_description.text = item.side_name
 
-                if(item.ristretto == 0)ristrettoView.imageAlpha = 50
-                else ristrettoView.imageAlpha = 255
+                if(item.ristretto == 0 && item.espresso == 0 && item.lungo == 0){
+                    ristrettoView.visibility = View.GONE
+                    espressoView.visibility = View.GONE
+                    lungoView.visibility = View.GONE
+                }
+                else{
+                    if(item.ristretto == 0)ristrettoView.imageAlpha = 50
+                    else ristrettoView.imageAlpha = 255
 
-                if(item.espresso == 0) espressoView.imageAlpha = 50
-                else espressoView.imageAlpha = 255
+                    if(item.espresso == 0) espressoView.imageAlpha = 50
+                    else espressoView.imageAlpha = 255
 
-                if(item.lungo == 0) lungoView.imageAlpha = 50
-                else lungoView.imageAlpha = 255
+                    if(item.lungo == 0) lungoView.imageAlpha = 50
+                    else lungoView.imageAlpha = 255
+                }
 
 
                 itemView.setOnClickListener { itemClick(item, iv_image) }

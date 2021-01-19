@@ -1,4 +1,4 @@
-package com.mj.capcoffee
+package com.mj.capcoffee.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.analytics.ktx.analytics
 import com.google.firebase.ktx.Firebase
+import com.mj.capcoffee.R
 import com.mj.capcoffee.adapter.CoffeeBrandAdapter
 import com.mj.capcoffee.databinding.ActivityMain2Binding
 import com.mj.capcoffee.datas.CoffeeBrandItem
