@@ -41,7 +41,7 @@ class DolceCapsuleFragment : Fragment() {
 
         brands = ArrayList()
 
-        brands.add(CoffeeBrandItem(R.drawable.dolce_gusto, "dolce_gusto_dolce", "", ""))
+        //brands.add(CoffeeBrandItem(R.drawable.dolce_gusto, "dolce_gusto_dolce", "", ""))
         brands.add(CoffeeBrandItem(R.drawable.starbucks, "starbucks_dolce", "", ""))
         brands.add(CoffeeBrandItem(R.drawable.hisbeans, "hisbeans_dolce", "", ""))
 
